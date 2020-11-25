@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "appCardio"
+  "defaultProject": "appCardio",
+  "cli": {
+    "analytics": false
+  }
 }
