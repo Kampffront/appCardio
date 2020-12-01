@@ -10,10 +10,14 @@ import { environment } from '../environments/environment';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PrimeroListComponent } from './primero/primero-list/primero-list.component';
+import { PrimeroFormComponent } from './primero/primero-form/primero-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrimeroListComponent,
+    PrimeroFormComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents : [ PrimeroFormComponent]// se va a crear de manera dinamica el componente y hay que informar por aca
 })
 export class AppModule { }
