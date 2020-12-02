@@ -16,12 +16,12 @@ export class PrimeroListComponent implements OnInit {
 
   clickAddTodo(){
     const modal = this.modalService.open(PrimeroFormComponent);
-    modal.result.then{
+    modal.result.then(
       this.handleModalPrimeroFormCLose.bind(this),
       this.handleModalPrimeroFormCLose.bind(this)
 
 
-    }
+    )
   }
 
   handleModalPrimeroFormCLose(){
