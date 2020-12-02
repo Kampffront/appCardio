@@ -13,6 +13,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PrimeroListComponent } from './primero/primero-list/primero-list.component';
 import { PrimeroFormComponent } from './primero/primero-form/primero-form.component';
 
+//utilidades
+import { MatSliderModule } from '@angular/material/slider';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +34,11 @@ import { PrimeroFormComponent } from './primero/primero-form/primero-form.compon
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSliderModule,
+    MatButtonModule,
+    MatIconModule
+
 
     
   ],

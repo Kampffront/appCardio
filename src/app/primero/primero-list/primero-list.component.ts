@@ -7,25 +7,9 @@ import { PrimeroFormComponent } from '../primero-form/primero-form.component';
   templateUrl: './primero-list.component.html',
   styleUrls: ['./primero-list.component.css']
 })
-export class PrimeroListComponent implements OnInit {
-
-  constructor(private modalService : NgbModal) { }
-
-  ngOnInit(): void {
-  }
-
-  clickAddTodo(){
-    const modal = this.modalService.open(PrimeroFormComponent);
-    modal.result.then(
-      this.handleModalPrimeroFormCLose.bind(this),
-      this.handleModalPrimeroFormCLose.bind(this)
+export class PrimeroListComponent  {
 
 
-    )
-  }
 
-  handleModalPrimeroFormCLose(){
-    alert('se ha cerrado el modal');
-  }
 
 }

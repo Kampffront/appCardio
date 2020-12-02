@@ -5,11 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './primero-form.component.html',
   styleUrls: ['./primero-form.component.css']
 })
-export class PrimeroFormComponent implements OnInit {
+export class PrimeroFormComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
