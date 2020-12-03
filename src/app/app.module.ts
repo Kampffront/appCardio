@@ -17,7 +17,11 @@ import { PrimeroFormComponent } from './primero/primero-form/primero-form.compon
 import { MatSliderModule } from '@angular/material/slider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-
+import { PrincipalBotonesComponent } from './principal/principal-botones/principal-botones.component';
+import { FormsModule } from '@angular/forms';
+import { EncuestaUnoComponent } from './principal/encuesta-uno/encuesta-uno.component';
+import { DatosSocioComponent } from './principal/datos-socio/datos-socio.component';
+import { TamizajeComponent } from './principal/tamizaje/tamizaje.component';
 
 
 
@@ -26,7 +30,11 @@ import {MatIconModule} from '@angular/material/icon';
   declarations: [
     AppComponent,
     PrimeroListComponent,
-    PrimeroFormComponent
+    PrimeroFormComponent,
+    PrincipalBotonesComponent,
+    EncuestaUnoComponent,
+    DatosSocioComponent,
+    TamizajeComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +45,8 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     MatSliderModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
 
 
     
