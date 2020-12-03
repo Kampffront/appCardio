@@ -8,10 +8,6 @@ import { SocioDatos } from 'src/app/models/socio-datos';
   styleUrls: ['./tamizaje.component.css']
 })
 export class TamizajeComponent implements OnInit {
-
-
-
-
  
   constructor(private router : Router) { }
 
@@ -31,6 +27,13 @@ export class TamizajeComponent implements OnInit {
 
     this.router.navigate(['parteTamizaje']);
   }
+
+  submit(){
+
+    
+   
+  }
+
 
 
 }

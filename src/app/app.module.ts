@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms';
 import { EncuestaUnoComponent } from './principal/encuesta-uno/encuesta-uno.component';
 import { DatosSocioComponent } from './principal/datos-socio/datos-socio.component';
 import { TamizajeComponent } from './principal/tamizaje/tamizaje.component';
+import { ResultadosImcComponent } from './principal/resultados-imc/resultados-imc.component';
 
 
 
@@ -34,7 +35,8 @@ import { TamizajeComponent } from './principal/tamizaje/tamizaje.component';
     PrincipalBotonesComponent,
     EncuestaUnoComponent,
     DatosSocioComponent,
-    TamizajeComponent
+    TamizajeComponent,
+    ResultadosImcComponent
   ],
   imports: [
     BrowserModule,
