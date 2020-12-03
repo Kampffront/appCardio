@@ -9,6 +9,8 @@ import { SocioDatos } from 'src/app/models/socio-datos';
 })
 export class DatosSocioComponent implements OnInit {
 
+  
+
   model : SocioDatos = {edad:0,nombre:'',
   tipoDoc:'',
   cedulanum:0,
@@ -46,13 +48,26 @@ export class DatosSocioComponent implements OnInit {
   fuma: '' //var 13
   };
 
+
+
   constructor(private router : Router) { }
 
   ngOnInit(): void {
   }
 
+  
+
   submit(){
     console.log(this.model);
+    console.log("Resultado");
+    //ingresando y mostrando valores para calcular y determinar riesgo
+    this.model.resultadoImc=this.numbercalcularImc(this.model.peso, this.model.altura);
+    this.model.interpretacionImc=this.determinarRiesgoSobrePeso(this.model.resultadoImc);
+
+  
+    console.log("IMC :"+this.model.resultadoImc);// resultado imc con nombre 
+    console.log("Interpretacion: "+this.model.interpretacionImc);// intepretacion
+    console.log("Usted tiene un peso ..."+this.model.descripcionImc);//  descripcion
     
   }
 
