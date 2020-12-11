@@ -1,4 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import url(bulma/css/bulma.css);
+
+body { margin: 0; 
+  
+    font-family: 'Titillium Web', sans-serif; }
+    
+
+
+.block:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+h1{
+font-family: Titillium, 'Titillium Web', sans-serif  ;
+font-weight: 700;
+}
+
+.contenido{
+
+    width: 20rem;
+    margin: 0 auto;
+
+
+}
+
+
+
