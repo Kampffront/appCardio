@@ -146,6 +146,22 @@
         </select>
       </div>
 
+      <h2>IMC</h2>
+      <br>
+      <section>
+        <p>Este apartado permite determinar el riesgo cardiovascular y metabólico al cual pueden estar expuestos los jóvenes en las edades entre los 18 y 28 años, a través de variables que ayudan a identificar la probabilidad de que se presente:
+            <br><br>
+            ●Probabilidad de ocurrencia de una Enfermedad Cardiovascular (infarto agudo de miocardio o ataque cerebrovascular) en un periodo de 10 años posterior a la realización del cálculo. 
+            <br><br>
+            ●Probabilidad de ocurrencia de diabetes en un periodo de 5 años posterior a la realización del cálculo.
+            <br><br>
+            ●Presencia o no de obesidad abdominal medida a través del perímetro abdominal y de acuerdo con los puntos de corte tanto para hombres como para mujeres. 
+            <br><br>
+            ●Presencia de sobrepeso u obesidad de acuerdo al cálculo del índice de masa corporal IMC).</p>
+            <br><br>
+    </section>
+
+
       
       <div class="form-group">
         <label for="peso">Peso</label>
@@ -164,7 +180,7 @@
 
     
 
-    <button type="submit" class="btn btn-success" >Calcular</button>
+    <button type="submit" class="btn btn-success" (click)="clickSiguiente()" >Calcular</button>
     <button type="button" class="btn btn-default" (click)="clickAnterior()">Atrás</button>
 
 

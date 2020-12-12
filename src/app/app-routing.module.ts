@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DatosSocioComponent } from './principal/datos-socio/datos-socio.component';
 import { EncuestaUnoComponent } from './principal/encuesta-uno/encuesta-uno.component';
 import { PrincipalBotonesComponent } from './principal/principal-botones/principal-botones.component';
+import { ResultadosImcComponent } from './principal/resultados-imc/resultados-imc.component';
 import { TamizajeComponent } from './principal/tamizaje/tamizaje.component';
 
 
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path : 'parteUno', component : DatosSocioComponent},
   {path : 'parteUno', component : EncuestaUnoComponent},
 
-  {path : 'parteTamizaje', component :  TamizajeComponent}
+  {path : 'parteTamizaje', component :  TamizajeComponent},
+  {path : 'resultadoImc', component : ResultadosImcComponent}
 ];
 
 @NgModule({
