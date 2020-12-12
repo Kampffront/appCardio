@@ -165,12 +165,21 @@
       
       <div class="form-group">
         <label for="peso">Peso</label>
+        <p>Digitar el peso sin incluir decimales. 
+          Aproximar al valor siguiente si la fracción es de 0,5 o más, o al valor previo si la fracción es menor de 0,5.
+          
+          Realice la  medición con la persona descalza y sin pesos adicionales en los bolsillos.</p>
         <input type="number" autocomplete="off" class="form-control" id="peso" name="peso" [(ngModel)]="model.peso">
     </div>
 
 
   <div class="form-group">
     <label for="estatura">Estatura</label>
+    <p>Use una cinta métrica o regla tallímetro ubicada desde el número cero a borde de  piso.
+      Realice la medición con la persona descalza y con los pies juntos, tocando la pared de medición  con los talones. 
+      
+      Para la toma del número de medición, utilice un elemento a 90° de la cinta métrica, justo en contacto con la parte superior de la cabeza.
+      La persona debe tener la mirada al frente. Ej: 1,68 metros.</p>
     <input type="number" autocomplete="off" class="form-control" id="estatura" name="estatura" [(ngModel)]="model.altura">
 </div>
 
