@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SocioDatos } from 'src/app/models/socio-datos';
+
 
 @Component({
   selector: 'app-datos-socio',
@@ -11,42 +11,46 @@ export class DatosSocioComponent implements OnInit {
 
   
 
-  model : SocioDatos = {edad:0,nombre:'',
-  tipoDoc:'',
-  cedulanum:0,
-  genero: '', //variable p4
-  telefono: 0,// p5 variable 3
-  estadoCivil: '', //p6
-  nivelEducativo:'', ///p7
-  estrato:'', //p8
-  regimenSalud:'', //p9
-  zonaResidencia:'', //p10
-  direccion: '', //p11
-  estudiaActual: '', //p12
-  trabajaActual: '',//
-  tieneHijos: '', //p13
-  cantidadHijos:0,
-  dependenciaPadres: '', //p14
+  edad: number = 0;
+  nombre: string ='';
+  tipoDoc: string ='';
+  cedulanum: number = 0;
+  genero: string = '';
+  telefono: number =  0;
+  estadoCivil: string = '';
+  nivelEducativo: string ='';
+  estrato: string ='';
+  regimenSalud: string ='';
+  zonaResidencia: string ='';
+  direccion: string = '';
+  estudiaActual: string = '';
+  trabajaActual: string = '';
+  tieneHijos: string ='';
+  cantidadHijos: number = 0;
+  dependenciaPadres:  string ='';
 
 //segunda parte tamizaje
 
-  peso: 0,// pero en kg variable 4
-  altura: 0, // en mts
-  resultadoImc: 0, //variable 5
-  interpretacionImc: '',
-  descripcionImc: '',
+  peso: number = 0;
+  altura: number = 0;
+  resultadoImc: number = 0;
+  interpretacionImc: string =  '';
 
-  perAbdominal: 0, // en cms variable 6 aproximar
-  tensionArterial:0,//  aproximar
-  ejercicioDiario:'', //variable 7
-  consumoVerduras: '',//variable 8
-  tieneHtensionArt: '',
-  tomaMedicamentos: '', //var 9
- nivelAzucar: '' , //var 10
- familiarDiabetes:'' , //var 11
-  diabetico:'', //var 12
-  fuma: '' //var 13
-  };
+  descripcionImc: string =  '';
+
+
+  perAbdominal: number = 0;
+  tensionArterial: number =0;
+  ejercicioDiario: string = '';
+
+  consumoVerduras: string =  '';
+  tieneHtensionArt: string =  '';
+
+  tomaMedicamentos: string =  '';
+ nivelAzucar: string =  '';
+ familiarDiabetes: string = '';
+  diabetico: string = '';
+  fuma: string =  '';
 
 
 
@@ -58,16 +62,16 @@ export class DatosSocioComponent implements OnInit {
   
 
   submit(){
-    console.log(this.model);
+    console.log(this);
     console.log("Resultado");
     //ingresando y mostrando valores para calcular y determinar riesgo
-    this.model.resultadoImc=this.numbercalcularImc(this.model.peso, this.model.altura);
-    this.model.interpretacionImc=this.determinarRiesgoSobrePeso(this.model.resultadoImc);
+    this.resultadoImc=this.numbercalcularImc(this.peso, this.altura);
+    this.interpretacionImc=this.determinarRiesgoSobrePeso(this.resultadoImc);
 
   
-    console.log("IMC :"+this.model.resultadoImc);// resultado imc con nombre 
-    console.log("Interpretacion: "+this.model.interpretacionImc);// intepretacion
-    console.log("Usted tiene un peso ..."+this.model.descripcionImc);//  descripcion
+    console.log("IMC :"+this.resultadoImc);// resultado imc con nombre 
+    console.log("Interpretacion: "+this.interpretacionImc);// intepretacion
+    console.log("Usted tiene un peso ..."+this.descripcionImc);//  descripcion
     
   }
 
