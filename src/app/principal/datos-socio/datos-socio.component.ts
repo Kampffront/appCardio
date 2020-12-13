@@ -115,7 +115,7 @@ export class DatosSocioComponent implements OnInit {
 
   clickSiguiente(){
 
-    this.router.navigate(['presultadoImc']);
+    this.router.navigate(['resultadoImc']);
   }
 
 }
