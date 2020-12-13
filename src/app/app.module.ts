@@ -23,6 +23,7 @@ import { EncuestaUnoComponent } from './principal/encuesta-uno/encuesta-uno.comp
 import { DatosSocioComponent } from './principal/datos-socio/datos-socio.component';
 import { TamizajeComponent } from './principal/tamizaje/tamizaje.component';
 import { ResultadosImcComponent } from './principal/resultados-imc/resultados-imc.component';
+import { RiesgoCardioComponent } from './principal/riesgo-cardio/riesgo-cardio.component';
 
 
 
@@ -36,7 +37,8 @@ import { ResultadosImcComponent } from './principal/resultados-imc/resultados-im
     EncuestaUnoComponent,
     DatosSocioComponent,
     TamizajeComponent,
-    ResultadosImcComponent
+    ResultadosImcComponent,
+    RiesgoCardioComponent
   ],
   imports: [
     BrowserModule,
