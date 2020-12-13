@@ -1,6 +1,8 @@
+import { Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { SocioDatos } from 'src/app/models/socio-datos';
+import { NgModel } from '@angular/forms';
 import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
+
 
 @Component({
   selector: 'app-resultados-imc',
@@ -9,11 +11,27 @@ import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
 })
 export class ResultadosImcComponent implements OnInit {
 
+  
+  //pendiente mostrar resultado
+  public imcMostrar : number = 0;
+  
+
+
+
+
+
 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+
+   
+
+
+
+  
 
 
 

@@ -111,7 +111,7 @@ export class DatosSocioComponent implements OnInit {
 
   clickSiguiente(){
 
-    this.router.navigate(['parteTamizaje']);
+    this.router.navigate(['presultadoImc']);
   }
 
 }
