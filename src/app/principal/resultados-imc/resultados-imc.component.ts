@@ -1,6 +1,7 @@
 import { Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
 
 
@@ -21,20 +22,24 @@ export class ResultadosImcComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
     
   }
 
+  public clickAnterior(){
+
+    this.router.navigate(['encuestaUno']);
+    
+  }
+
+  clickSiguiente(){
+
+    this.router.navigate(['parteTamizaje']);
+  }
+
    
 
-
-
-  
-
-
-
-  //resultado : SocioDatos ;
 
 }

@@ -15,7 +15,7 @@ const routes: Routes = [
   {path : '', component : PrincipalBotonesComponent},
 
   {path : 'parteUno', component : DatosSocioComponent},
-  {path : 'parteUno', component : EncuestaUnoComponent},
+
 
   {path : 'parteTamizaje', component :  TamizajeComponent},
   {path : 'resultadoImc', component : ResultadosImcComponent}
