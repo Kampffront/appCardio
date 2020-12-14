@@ -2,6 +2,7 @@ import { Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Datosvariables } from 'src/app/models/datosvariables';
 import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
 
 
@@ -12,9 +13,17 @@ import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
 })
 export class ResultadosImcComponent implements OnInit {
 
+
+
   
   //pendiente mostrar resultado
+
+  //pendiente mostrar resultado
+
+  
   public imcMostrar : number = 0;
+
+
   
 
 

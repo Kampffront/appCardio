@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Datosvariables } from 'src/app/models/datosvariables';
 
 
 @Component({
@@ -9,58 +10,83 @@ import { Router } from '@angular/router';
 })
 export class DatosSocioComponent implements OnInit {
 
-  
 
-  edad: number = 0;
-  nombre: string ='';
-  tipoDoc: string ='';
-  cedulanum: number = 0;
-  genero: string = '';
-  telefono: number =  0;
-  estadoCivil: string = '';
-  nivelEducativo: string ='';
-  estrato: string ='';
-  regimenSalud: string ='';
-  zonaResidencia: string ='';
-  direccion: string = '';
-  estudiaActual: string = '';
-  trabajaActual: string = '';
-  tieneHijos: string ='';
-  cantidadHijos: number = 0;
-  dependenciaPadres:  string ='';
+
+  model : Datosvariables = { 
+
+  edad: 0,
+  nombre:'',
+  tipoDoc:'',
+  cedulanum: 0,
+  genero: '',
+  telefono:  0,
+  estadoCivil: '',
+  nivelEducativo:'',
+  estrato:'',
+  regimenSalud:'',
+  zonaResidencia:'',
+  direccion: '',
+  estudiaActual: '',
+  trabajaActual: '',
+  tieneHijos :'',
+  cantidadHijos: 0,
+  dependenciaPadres: '',
 
 //segunda parte tamizaje
 
-  peso: number = 0;
-  altura: number = 0;
-  resultadoImc: number = 0;
-  interpretacionImc: string =  '';
+  peso: 0,
+  altura: 0,
+  resultadoImc: 0,
+  interpretacionImc: '',
 
-  descripcionImc: string =  '';
+  descripcionImc:  '',
 
+  //riesgo diabetes y cardio 
 
- 
+  perAbdominal: 0,
+  tensionArterial:0,
+  ejercicioDiario: '',
 
+  consumoVerduras:  '',
+  tieneHtensionArt:  '',
+
+  tomaMedicamentos:  '',
+ nivelAzucar:  '',
+ familiarDiabetes: '',
+  diabetico: '',
+  fuma:  '',
+
+  }
 
 
   constructor(private router : Router) { }
 
   ngOnInit(): void {
   }
+   
+
+  
+
+
+
 
   
 
   submit(){
+
+    
     console.log(this);
     console.log("Resultado");
     //ingresando y mostrando valores para calcular y determinar riesgo
-    this.resultadoImc=this.numbercalcularImc(this.peso, this.altura);
-    this.interpretacionImc=this.determinarRiesgoSobrePeso(this.resultadoImc);
+    this.model.resultadoImc=this.numbercalcularImc(this.model.peso, this.model.altura);
+    this.model.interpretacionImc=this.determinarRiesgoSobrePeso(this.model.resultadoImc);
 
   
-    console.log("IMC :"+this.resultadoImc);// resultado imc con nombre 
-    console.log("Interpretacion: "+this.interpretacionImc);// intepretacion
-    console.log("Usted tiene un peso ..."+this.descripcionImc);//  descripcion
+    console.log("IMC :"+this.model.resultadoImc);// resultado imc con nombre 
+    console.log("Interpretacion: "+this.model.interpretacionImc);// intepretacion
+    console.log("Usted tiene un peso ..."+this.model.descripcionImc);//  descripcion
+
+    return this.model;
     
   }
 

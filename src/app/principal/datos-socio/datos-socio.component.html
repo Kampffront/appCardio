@@ -10,7 +10,7 @@
 
     <div class="form-group">
         <label for="edad">Edad</label>
-        <select class="form-control" id="edad" name="edad" [(ngModel)]="edad">
+        <select class="form-control" id="edad" name="edad" [(ngModel)]="model.edad">
             <option value="18" selected>18</option>
             <option value="19" selected>19</option>
             <option value="20" selected>20</option>
@@ -27,12 +27,12 @@
 
     <div class="form-group">
         <label for="nombre">Nombre</label>
-        <input type="text" autocomplete="off" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre">
+        <input type="text" autocomplete="off" class="form-control" id="nombre" name="nombre" [(ngModel)]="model.nombre">
     </div>
 
     <div class="form-group">
         <label for="tipodocumento">Tipo de Documento</label>
-        <select class="form-control" id="tipodocumento" name="tipodocumento" [(ngModel)]="tipoDoc">
+        <select class="form-control" id="tipodocumento" name="tipodocumento" [(ngModel)]="model.tipoDoc">
             <option value="cedula-ciudadania" selected>Cédula de ciudadanía </option>
             <option value="cedula-extranjeria" selected>Cédula de extranjería </option>
         </select>
@@ -40,7 +40,7 @@
 
       <div class="form-group">
         <label for="genero">Género</label>
-        <select class="form-control" id="genero" name="genero" [(ngModel)]="genero">
+        <select class="form-control" id="genero" name="genero" [(ngModel)]="model.genero">
             <option value="masculino" selected>masculino </option>
             <option value="femenino" selected>femenino </option>
         </select>
@@ -48,12 +48,12 @@
 
       <div class="form-group">
         <label for="telefono">telefono</label>
-        <input type="tel" autocomplete="off" class="form-control" id="telefono" name="telefono" [(ngModel)]="telefono">
+        <input type="tel" autocomplete="off" class="form-control" id="telefono" name="telefono" [(ngModel)]="model.telefono">
     </div>
 
     <div class="form-group">
         <label for="estado-civil">estado civil</label>
-        <select class="form-control" id="estado civil" name="estado civil" [(ngModel)]="estadoCivil">
+        <select class="form-control" id="estado civil" name="estado civil" [(ngModel)]="model.estadoCivil">
             <option value="soltero" selected>Soltero </option>
             <option value="casado" selected>Casado </option>
             <option value="union Libre" selected>Unión Libre </option>
@@ -63,7 +63,7 @@
 
       <div class="form-group">
         <label for="nivel educativo">nivel educativo</label>
-        <select class="form-control" id="nivel educativo" name="nivel educativo" [(ngModel)]="nivelEducativo">
+        <select class="form-control" id="nivel educativo" name="nivel educativo" [(ngModel)]="model.nivelEducativo">
             <option value="Básica primaria (1-5 primaria)" selected>Básica primaria (1-5 primaria)</option>
             <option value="Básica secundaria: (6-9 bachillerato)" selected>Básica secundaria: (6-9 bachillerato)</option>
             <option value="Media: (10 y 11 bachillerato)" selected>Media: (10 y 11 bachillerato)</option>
@@ -76,7 +76,7 @@
 
       <div class="form-group">
         <label for="estrato">Estrato socioeconómico</label>
-        <select class="form-control" id="estrato" name="estrato" [(ngModel)]="estrato">
+        <select class="form-control" id="estrato" name="estrato" [(ngModel)]="model.estrato">
             <option value="1" selected>1</option>
             <option value="2" selected>2</option>
             <option value="3" selected>3</option>
@@ -87,7 +87,7 @@
 
       <div class="form-group">
         <label for="regimensalud">Régimen de salud</label>
-        <select class="form-control" id="regimensalud" name="regimensalud" [(ngModel)]="regimenSalud">
+        <select class="form-control" id="regimensalud" name="regimensalud" [(ngModel)]="model.regimenSalud">
             <option value="Contributivo" selected>Contributivo</option>
             <option value="Subsidiado" selected>Subsidiado</option>
             <option value="Especial" selected>Especial</option>
@@ -98,7 +98,7 @@
 
       <div class="form-group">
         <label for="zonaresidencia">Zona de Residencia</label>
-        <select class="form-control" id="zonaresidencia" name="zonaresidencia" [(ngModel)]="zonaResidencia">
+        <select class="form-control" id="zonaresidencia" name="zonaresidencia" [(ngModel)]="model.zonaResidencia">
             <option value="rural" selected>rural</option>
             <option value="urbana" selected>urbana</option>
         </select>
@@ -106,12 +106,12 @@
 
       <div class="form-group">
         <label for="direccion">Dirección</label>
-        <input type="text" autocomplete="off" class="form-control" id="direccion" name="direccion" [(ngModel)]="direccion">
+        <input type="text" autocomplete="off" class="form-control" id="direccion" name="direccion" [(ngModel)]="model.direccion">
     </div>
 
     <div class="form-group">
         <label for="estudiaactual">¿Estudia actualmente?</label>
-        <select class="form-control" id="estudiaactual" name="estudiaactual" [(ngModel)]="estudiaActual">
+        <select class="form-control" id="estudiaactual" name="estudiaactual" [(ngModel)]="model.estudiaActual">
             <option value="si" selected>Si</option>
             <option value="no" selected>No</option>
         </select>
@@ -119,7 +119,7 @@
 
       <div class="form-group">
         <label for="trabajaactual">¿Trabaja actualmente?</label>
-        <select class="form-control" id="trabajaactual" name="trabajaactual" [(ngModel)]="trabajaActual">
+        <select class="form-control" id="trabajaactual" name="trabajaactual" [(ngModel)]="model.trabajaActual">
             <option value="si" selected>Si</option>
             <option value="no" selected>No</option>
         </select>
@@ -127,20 +127,20 @@
 
       <div class="form-group">
         <label for="tienehijos">¿Tiene Hijos?</label>
-        <select class="form-control" id="tienehijos" name="tienehijos" [(ngModel)]="tieneHijos">
+        <select class="form-control" id="tienehijos" name="tienehijos" [(ngModel)]="model.tieneHijos">
             <option value="si" selected>Si</option>
             <option value="no" selected>No</option>
         </select>
-      </div>
+      </div>model.
 
       <div class="form-group">
         <label for="cuantos">Cuantos</label>
-        <input type="text" autocomplete="off" class="form-control" id="cuantos" name="cuantos" [(ngModel)]="cantidadHijos">
+        <input type="text" autocomplete="off" class="form-control" id="cuantos" name="cuantos" [(ngModel)]="model.cantidadHijos">
     </div>
 
     <div class="form-group">
         <label for="dependenciapadres">¿Dependencia económica de sus padres o algún familiar?</label>
-        <select class="form-control" id="dependenciapadres" name="dependenciapadres" [(ngModel)]="dependenciaPadres">
+        <select class="form-control" id="dependenciapadres" name="dependenciapadres" [(ngModel)]="model.dependenciaPadres">
             <option value="si" selected>Si</option>
             <option value="no" selected>No</option>
         </select>
@@ -169,7 +169,7 @@
           Aproximar al valor siguiente si la fracción es de 0,5 o más, o al valor previo si la fracción es menor de 0,5.
           
           Realice la  medición con la persona descalza y sin pesos adicionales en los bolsillos.</p>
-        <input type="number" autocomplete="off" class="form-control" id="peso" name="peso" [(ngModel)]="peso">
+        <input type="number" autocomplete="off" class="form-control" id="peso" name="peso" [(ngModel)]="model.peso">
     </div>
 
 
@@ -180,7 +180,7 @@
       
       Para la toma del número de medición, utilice un elemento a 90° de la cinta métrica, justo en contacto con la parte superior de la cabeza.
       La persona debe tener la mirada al frente. Ej: 1,68 metros.</p>
-    <input type="number" autocomplete="off" class="form-control" id="estatura" name="estatura" [(ngModel)]="altura">
+    <input type="number" autocomplete="off" class="form-control" id="estatura" name="estatura" [(ngModel)]="model.altura">
 </div>
 
 
