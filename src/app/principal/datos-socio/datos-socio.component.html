@@ -1,199 +1,194 @@
 <div class='container-fluid'>
-<h1>Datos Socio Demográficos</h1>
+  <h1>Datos Socio Demográficos</h1>
 
 
+  <form (submit)="submit() ">
+    <div class="form-group">
+      <label for="edad">Edad</label>
+      <select class="form-control" id="edad" name="edad" [(ngModel)]="model.edad">
+        <option value="18" selected>18</option>
+        <option value="19" selected>19</option>
+        <option value="20" selected>20</option>
+        <option value="21" selected>21</option>
+        <option value="22" selected>22</option>
+        <option value="23" selected>23</option>
+        <option value="24" selected>24</option>
+        <option value="25" selected>25</option>
+        <option value="26" selected>26</option>
+        <option value="27" selected>27</option>
+        <option value="28" selected>28</option>
+      </select>
+    </div>
 
-
-
-
-<form (submit)="submit()">
 
     <div class="form-group">
-        <label for="edad">Edad</label>
-        <select class="form-control" id="edad" name="edad" [(ngModel)]="edad">
-            <option value="18" selected>18</option>
-            <option value="19" selected>19</option>
-            <option value="20" selected>20</option>
-            <option value="21" selected>21</option>
-            <option value="22" selected>22</option>
-            <option value="23" selected>23</option>
-            <option value="24" selected>24</option>
-            <option value="25" selected>25</option>
-            <option value="26" selected>26</option>
-            <option value="27" selected>27</option>
-            <option value="28" selected>28</option>
-        </select>
-      </div>
+      <label for="nombre">Nombre</label>
+      <input type="text" autocomplete="off" class="form-control" id="nombre" name="nombre" [(ngModel)]="model.nombre">
+    </div>
+
 
     <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" autocomplete="off" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre">
+      <label for="tipodocumento">Tipo de Documento</label>
+      <select class="form-control" id="tipodocumento" name="tipodocumento" [(ngModel)]="model.tipoDoc">
+        <option value="cedula-ciudadania" selected>Cédula de ciudadanía </option>
+        <option value="cedula-extranjeria" selected>Cédula de extranjería </option>
+      </select>
+    </div>
+
+
+    <div class="form-group">
+      <label for="genero">Género</label>
+      <select class="form-control" id="genero" name="genero" [(ngModel)]="model.genero">
+        <option value="masculino" selected>masculino </option>
+        <option value="femenino" selected>femenino </option>
+      </select>
     </div>
 
     <div class="form-group">
-        <label for="tipodocumento">Tipo de Documento</label>
-        <select class="form-control" id="tipodocumento" name="tipodocumento" [(ngModel)]="tipoDoc">
-            <option value="cedula-ciudadania" selected>Cédula de ciudadanía </option>
-            <option value="cedula-extranjeria" selected>Cédula de extranjería </option>
-        </select>
-      </div>
+          <label for="telefono">telefono</label>
+          <input type="tel" autocomplete="off" class="form-control" id="telefono" name="telefono" [(ngModel)]="model.telefono">
+    </div>
 
-      <div class="form-group">
-        <label for="genero">Género</label>
-        <select class="form-control" id="genero" name="genero" [(ngModel)]="genero">
-            <option value="masculino" selected>masculino </option>
-            <option value="femenino" selected>femenino </option>
-        </select>
-      </div>
 
-      <div class="form-group">
-        <label for="telefono">telefono</label>
-        <input type="tel" autocomplete="off" class="form-control" id="telefono" name="telefono" [(ngModel)]="telefono">
+    <div class="form-group">
+          <label for="estado-civil">estado civil</label>
+          <select class="form-control" id="estado civil" name="estado civil" [(ngModel)]="model.estadoCivil">
+              <option value="soltero" selected>Soltero </option>
+              <option value="casado" selected>Casado </option>
+              <option value="union Libre" selected>Unión Libre </option>
+              <option value="otro" selected>Otro </option>
+          </select>
     </div>
 
     <div class="form-group">
-        <label for="estado-civil">estado civil</label>
-        <select class="form-control" id="estado civil" name="estado civil" [(ngModel)]="estadoCivil">
-            <option value="soltero" selected>Soltero </option>
-            <option value="casado" selected>Casado </option>
-            <option value="union Libre" selected>Unión Libre </option>
-            <option value="otro" selected>Otro </option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="nivel educativo">nivel educativo</label>
-        <select class="form-control" id="nivel educativo" name="nivel educativo" [(ngModel)]="nivelEducativo">
-            <option value="Básica primaria (1-5 primaria)" selected>Básica primaria (1-5 primaria)</option>
-            <option value="Básica secundaria: (6-9 bachillerato)" selected>Básica secundaria: (6-9 bachillerato)</option>
-            <option value="Media: (10 y 11 bachillerato)" selected>Media: (10 y 11 bachillerato)</option>
-            <option value="Técnico" selected>Técnico</option>
-            <option value="Tecnológico" selected>Tecnológico</option>
-            <option value="Universitario" selected>Universitario</option>
-            <option value="Postgrado" selected>Postgrado</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="estrato">Estrato socioeconómico</label>
-        <select class="form-control" id="estrato" name="estrato" [(ngModel)]="estrato">
-            <option value="1" selected>1</option>
-            <option value="2" selected>2</option>
-            <option value="3" selected>3</option>
-            <option value="4" selected>4</option>
-            <option value="5" selected>5</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="regimensalud">Régimen de salud</label>
-        <select class="form-control" id="regimensalud" name="regimensalud" [(ngModel)]="regimenSalud">
-            <option value="Contributivo" selected>Contributivo</option>
-            <option value="Subsidiado" selected>Subsidiado</option>
-            <option value="Especial" selected>Especial</option>
-            <option value="Eps" selected>Eps</option>
-
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="zonaresidencia">Zona de Residencia</label>
-        <select class="form-control" id="zonaresidencia" name="zonaresidencia" [(ngModel)]="zonaResidencia">
-            <option value="rural" selected>rural</option>
-            <option value="urbana" selected>urbana</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="direccion">Dirección</label>
-        <input type="text" autocomplete="off" class="form-control" id="direccion" name="direccion" [(ngModel)]="direccion">
+          <label for="nivel educativo">nivel educativo</label>
+          <select class="form-control" id="nivel educativo" name="nivel educativo" [(ngModel)]="model.nivelEducativo">
+              <option value="Básica primaria (1-5 primaria)" selected>Básica primaria (1-5 primaria)</option>
+              <option value="Básica secundaria: (6-9 bachillerato)" selected>Básica secundaria: (6-9 bachillerato)</option>
+              <option value="Media: (10 y 11 bachillerato)" selected>Media: (10 y 11 bachillerato)</option>
+              <option value="Técnico" selected>Técnico</option>
+              <option value="Tecnológico" selected>Tecnológico</option>
+              <option value="Universitario" selected>Universitario</option>
+              <option value="Postgrado" selected>Postgrado</option>
+          </select>
     </div>
 
     <div class="form-group">
-        <label for="estudiaactual">¿Estudia actualmente?</label>
-        <select class="form-control" id="estudiaactual" name="estudiaactual" [(ngModel)]="estudiaActual">
-            <option value="si" selected>Si</option>
-            <option value="no" selected>No</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="trabajaactual">¿Trabaja actualmente?</label>
-        <select class="form-control" id="trabajaactual" name="trabajaactual" [(ngModel)]="trabajaActual">
-            <option value="si" selected>Si</option>
-            <option value="no" selected>No</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="tienehijos">¿Tiene Hijos?</label>
-        <select class="form-control" id="tienehijos" name="tienehijos" [(ngModel)]="tieneHijos">
-            <option value="si" selected>Si</option>
-            <option value="no" selected>No</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="cuantos">Cuantos</label>
-        <input type="text" autocomplete="off" class="form-control" id="cuantos" name="cuantos" [(ngModel)]="cantidadHijos">
+          <label for="estrato">Estrato socioeconómico</label>
+          <select class="form-control" id="estrato" name="estrato" [(ngModel)]="model.estrato">
+              <option value="1" selected>1</option>
+              <option value="2" selected>2</option>
+              <option value="3" selected>3</option>
+              <option value="4" selected>4</option>
+              <option value="5" selected>5</option>
+          </select>
     </div>
 
     <div class="form-group">
-        <label for="dependenciapadres">¿Dependencia económica de sus padres o algún familiar?</label>
-        <select class="form-control" id="dependenciapadres" name="dependenciapadres" [(ngModel)]="dependenciaPadres">
-            <option value="si" selected>Si</option>
-            <option value="no" selected>No</option>
-        </select>
-      </div>
+          <label for="regimensalud">Régimen de salud</label>
+          <select class="form-control" id="regimensalud" name="regimensalud" [(ngModel)]="model.regimenSalud">
+              <option value="Contributivo" selected>Contributivo</option>
+              <option value="Subsidiado" selected>Subsidiado</option>
+              <option value="Especial" selected>Especial</option>
+              <option value="Eps" selected>Eps</option>
 
-      <h2>IMC</h2>
-      <br>
-      <section>
-        <p>Este apartado permite determinar el riesgo cardiovascular y metabólico al cual pueden estar expuestos los jóvenes en las edades entre los 18 y 28 años, a través de variables que ayudan a identificar la probabilidad de que se presente:
-            <br><br>
-            ●Probabilidad de ocurrencia de una Enfermedad Cardiovascular (infarto agudo de miocardio o ataque cerebrovascular) en un periodo de 10 años posterior a la realización del cálculo. 
-            <br><br>
-            ●Probabilidad de ocurrencia de diabetes en un periodo de 5 años posterior a la realización del cálculo.
-            <br><br>
-            ●Presencia o no de obesidad abdominal medida a través del perímetro abdominal y de acuerdo con los puntos de corte tanto para hombres como para mujeres. 
-            <br><br>
-            ●Presencia de sobrepeso u obesidad de acuerdo al cálculo del índice de masa corporal IMC).</p>
-            <br><br>
+          </select>
+    </div>
+
+    <div class="form-group">
+          <label for="zonaresidencia">Zona de Residencia</label>
+          <select class="form-control" id="zonaresidencia" name="zonaresidencia" [(ngModel)]="model.zonaResidencia">
+              <option value="rural" selected>rural</option>
+              <option value="urbana" selected>urbana</option>
+          </select>
+    </div>
+
+    <div class="form-group">
+          <label for="direccion">Dirección</label>
+          <input type="text" autocomplete="off" class="form-control" id="direccion" name="direccion" [(ngModel)]="model.direccion">
+    </div>
+
+    <div class="form-group">
+          <label for="estudiaactual">¿Estudia actualmente?</label>
+          <select class="form-control" id="estudiaactual" name="estudiaactual" [(ngModel)]="model.estudiaActual">
+              <option value="si" selected>Si</option>
+              <option value="no" selected>No</option>
+          </select>
+    </div>
+
+    <div class="form-group">
+          <label for="trabajaactual">¿Trabaja actualmente?</label>
+          <select class="form-control" id="trabajaactual" name="trabajaactual" [(ngModel)]="model.trabajaActual">
+              <option value="si" selected>Si</option>
+              <option value="no" selected>No</option>
+          </select>
+    </div>
+
+      <div class="form-group">
+          <label for="tienehijos">¿Tiene Hijos?</label>
+          <select class="form-control" id="tienehijos" name="tienehijos" [(ngModel)]="model.tieneHijos">
+              <option value="si" selected>Si</option>
+              <option value="no" selected>No</option>
+          </select>
+    </div>
+
+    <div class="form-group">
+          <label for="cuantos">Cuantos</label>
+          <input type="text" autocomplete="off" class="form-control" id="cuantos" name="cuantos" [(ngModel)]="model.cantidadHijos">
+    </div>
+
+    <div class="form-group">
+          <label for="dependenciapadres">¿Dependencia económica de sus padres o algún familiar?</label>
+          <select class="form-control" id="dependenciapadres" name="dependenciapadres" [(ngModel)]="model.dependenciaPadres">
+              <option value="si" selected>Si</option>
+              <option value="no" selected>No</option>
+          </select>
+    </div>
+
+    <h2>IMC</h2>
+    <br>
+    <section>
+          <p>Este apartado permite determinar el riesgo cardiovascular y metabólico al cual pueden estar expuestos los jóvenes en las edades entre los 18 y 28 años, a través de variables que ayudan a identificar la probabilidad de que se presente:
+              <br><br>
+              ●Probabilidad de ocurrencia de una Enfermedad Cardiovascular (infarto agudo de miocardio o ataque cerebrovascular) en un periodo de 10 años posterior a la realización del cálculo. 
+              <br><br>
+              ●Probabilidad de ocurrencia de diabetes en un periodo de 5 años posterior a la realización del cálculo.
+              <br><br>
+              ●Presencia o no de obesidad abdominal medida a través del perímetro abdominal y de acuerdo con los puntos de corte tanto para hombres como para mujeres. 
+              <br><br>
+              ●Presencia de sobrepeso u obesidad de acuerdo al cálculo del índice de masa corporal IMC).</p>
+              <br><br>
     </section>
 
 
-      
-      <div class="form-group">
-        <label for="peso">Peso</label>
-        <p>Digitar el peso sin incluir decimales. 
-          Aproximar al valor siguiente si la fracción es de 0,5 o más, o al valor previo si la fracción es menor de 0,5.
-          
-          Realice la  medición con la persona descalza y sin pesos adicionales en los bolsillos.</p>
-        <input type="number" autocomplete="off" class="form-control" id="peso" name="peso" [(ngModel)]="peso">
+        
+    <div class="form-group">
+          <label for="peso">Peso</label>
+          <p>Digitar el peso sin incluir decimales. 
+            Aproximar al valor siguiente si la fracción es de 0,5 o más, o al valor previo si la fracción es menor de 0,5.
+            
+            Realice la  medición con la persona descalza y sin pesos adicionales en los bolsillos.</p>
+          <input type="number" autocomplete="off" class="form-control" id="peso" name="peso" [(ngModel)]="model.peso">
     </div>
 
 
-  <div class="form-group">
-    <label for="estatura">Estatura</label>
-    <p>Use una cinta métrica o regla tallímetro ubicada desde el número cero a borde de  piso.
-      Realice la medición con la persona descalza y con los pies juntos, tocando la pared de medición  con los talones. 
+    <div class="form-group">
+      <label for="estatura">Estatura</label>
+      <p>Use una cinta métrica o regla tallímetro ubicada desde el número cero a borde de  piso.
+        Realice la medición con la persona descalza y con los pies juntos, tocando la pared de medición  con los talones. 
+        
+        Para la toma del número de medición, utilice un elemento a 90° de la cinta métrica, justo en contacto con la parte superior de la cabeza.
+        La persona debe tener la mirada al frente. Ej: 1,68 metros.</p>
+      <input type="number" autocomplete="off" class="form-control" id="estatura" name="estatura" [(ngModel)]="model.altura">
+    </div>
+
       
-      Para la toma del número de medición, utilice un elemento a 90° de la cinta métrica, justo en contacto con la parte superior de la cabeza.
-      La persona debe tener la mirada al frente. Ej: 1,68 metros.</p>
-    <input type="number" autocomplete="off" class="form-control" id="estatura" name="estatura" [(ngModel)]="altura">
-</div>
-
-
-
-
-
-    
 
     <button type="submit" class="btn btn-success" >Calcular</button>
     <button type="button" class="btn btn-default" (click)="clickAnterior()">Atrás</button>
 
 
 
-</form>
+  </form>
 
 </div>

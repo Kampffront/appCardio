@@ -1,7 +1,7 @@
 import { Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
-import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,9 +11,22 @@ import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
 })
 export class ResultadosImcComponent implements OnInit {
 
+
+
   
   //pendiente mostrar resultado
-  public imcMostrar : number = 0;
+
+  //pendiente mostrar resultado
+
+  
+  public imcMostrar : number =0;
+  public pesoMostrar : number = 0;
+  public estatura : number = 0;
+
+
+
+
+
   
 
 
@@ -21,20 +34,27 @@ export class ResultadosImcComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
     
   }
 
+  //funcion boton para ir a pagina anterior
+  public clickAnterior(){
+
+    this.router.navigate(['encuestaUno']);
+    
+  }
+
+
+  //funcion boton para ir a pagina siguiente
+  clickSiguiente(){
+
+    this.router.navigate(['parteCardio']);
+  }
+
    
 
-
-
-  
-
-
-
-  //resultado : SocioDatos ;
 
 }

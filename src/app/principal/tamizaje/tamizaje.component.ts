@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SocioDatos } from 'src/app/models/socio-datos';
 import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
 
 @Component({
@@ -15,7 +14,7 @@ export class TamizajeComponent  implements OnInit  {
 
   
  
-  constructor(private router : Router, ) { }
+  constructor(private router : Router ) { }
 
   ngOnInit(): void {
   }
@@ -25,7 +24,7 @@ export class TamizajeComponent  implements OnInit  {
 
   public clickAnterior(){
 
-    this.router.navigate(['encuestaUno']);
+    this.router.navigate(['parteUno']);
     
   }
 
