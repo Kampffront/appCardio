@@ -57,6 +57,6 @@ import { RiesgoCardioComponent } from './principal/riesgo-cardio/riesgo-cardio.c
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents : [ PrimeroFormComponent]// se va a crear de manera dinamica el componente y hay que informar por aca
+  entryComponents : [ PrimeroFormComponent, DatosSocioComponent]// se va a crear de manera dinamica el componente y hay que informar por aca
 })
 export class AppModule { }

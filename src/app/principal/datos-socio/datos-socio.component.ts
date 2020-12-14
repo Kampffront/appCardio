@@ -44,6 +44,7 @@ export class DatosSocioComponent implements OnInit {
   }
 
 
+
   constructor(private router : Router) { }
 
   ngOnInit(): void {

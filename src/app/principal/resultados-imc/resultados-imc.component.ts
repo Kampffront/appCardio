@@ -19,7 +19,7 @@ export class ResultadosImcComponent implements OnInit {
   //pendiente mostrar resultado
 
   
-  public imcMostrar : number = 0;
+  public imcMostrar : number =0;
   public pesoMostrar : number = 0;
   public estatura : number = 0;
 
