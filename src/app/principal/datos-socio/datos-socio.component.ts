@@ -39,18 +39,7 @@ export class DatosSocioComponent implements OnInit {
   descripcionImc: string =  '';
 
 
-  perAbdominal: number = 0;
-  tensionArterial: number =0;
-  ejercicioDiario: string = '';
-
-  consumoVerduras: string =  '';
-  tieneHtensionArt: string =  '';
-
-  tomaMedicamentos: string =  '';
- nivelAzucar: string =  '';
- familiarDiabetes: string = '';
-  diabetico: string = '';
-  fuma: string =  '';
+ 
 
 
 

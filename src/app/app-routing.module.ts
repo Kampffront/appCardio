@@ -4,6 +4,7 @@ import { DatosSocioComponent } from './principal/datos-socio/datos-socio.compone
 import { EncuestaUnoComponent } from './principal/encuesta-uno/encuesta-uno.component';
 import { PrincipalBotonesComponent } from './principal/principal-botones/principal-botones.component';
 import { ResultadosImcComponent } from './principal/resultados-imc/resultados-imc.component';
+import { RiesgoCardioComponent } from './principal/riesgo-cardio/riesgo-cardio.component';
 import { TamizajeComponent } from './principal/tamizaje/tamizaje.component';
 
 
@@ -18,7 +19,9 @@ const routes: Routes = [
 
 
   {path : 'parteTamizaje', component :  TamizajeComponent},
-  {path : 'resultadoImc', component : ResultadosImcComponent}
+  {path : 'resultadoImc', component : ResultadosImcComponent},
+
+  {path : 'parteCardio', component : RiesgoCardioComponent}
 ];
 
 @NgModule({

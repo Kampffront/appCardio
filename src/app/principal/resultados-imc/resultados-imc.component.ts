@@ -28,15 +28,18 @@ export class ResultadosImcComponent implements OnInit {
     
   }
 
+  //funcion boton para ir a pagina anterior
   public clickAnterior(){
 
     this.router.navigate(['encuestaUno']);
     
   }
 
+
+  //funcion boton para ir a pagina siguiente
   clickSiguiente(){
 
-    this.router.navigate(['parteTamizaje']);
+    this.router.navigate(['parteCardio']);
   }
 
    
