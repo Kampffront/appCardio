@@ -2,8 +2,6 @@ import { Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Datosvariables } from 'src/app/models/datosvariables';
-import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
 
 
 @Component({
@@ -22,6 +20,11 @@ export class ResultadosImcComponent implements OnInit {
 
   
   public imcMostrar : number = 0;
+  public pesoMostrar : number = 0;
+  public estatura : number = 0;
+
+
+
 
 
   

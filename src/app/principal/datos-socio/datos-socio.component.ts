@@ -39,22 +39,7 @@ export class DatosSocioComponent implements OnInit {
   resultadoImc: 0,
   interpretacionImc: '',
 
-  descripcionImc:  '',
-
-  //riesgo diabetes y cardio 
-
-  perAbdominal: 0,
-  tensionArterial:0,
-  ejercicioDiario: '',
-
-  consumoVerduras:  '',
-  tieneHtensionArt:  '',
-
-  tomaMedicamentos:  '',
- nivelAzucar:  '',
- familiarDiabetes: '',
-  diabetico: '',
-  fuma:  '',
+  descripcionImc:  ''
 
   }
 
@@ -86,7 +71,7 @@ export class DatosSocioComponent implements OnInit {
     console.log("Interpretacion: "+this.model.interpretacionImc);// intepretacion
     console.log("Usted tiene un peso ..."+this.model.descripcionImc);//  descripcion
 
-    return this.model;
+    
     
   }
 
