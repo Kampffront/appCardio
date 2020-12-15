@@ -1,6 +1,8 @@
+import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Datosvariables } from 'src/app/models/datosvariables';
+import { ResultadostotalService } from 'src/app/resultadostotal.service';
 
 
 @Component({
@@ -8,6 +10,8 @@ import { Datosvariables } from 'src/app/models/datosvariables';
   templateUrl: './datos-socio.component.html',
   styleUrls: ['./datos-socio.component.css']
 })
+
+
 export class DatosSocioComponent implements OnInit {
 
 
@@ -45,9 +49,10 @@ export class DatosSocioComponent implements OnInit {
 
 
 
-  constructor(private router : Router) { }
+  constructor(private router : Router, public datoSocioServicio : ResultadostotalService) { }
 
   ngOnInit(): void {
+
   }
    
 
@@ -60,7 +65,6 @@ export class DatosSocioComponent implements OnInit {
 
   submit(){
 
-    
     console.log(this);
     console.log("Resultado");
     //ingresando y mostrando valores para calcular y determinar riesgo

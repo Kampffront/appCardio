@@ -2,6 +2,8 @@ import { Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ResultadostotalService } from 'src/app/resultadostotal.service';
+import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
 
 
 @Component({
@@ -26,17 +28,12 @@ export class ResultadosImcComponent implements OnInit {
 
 
 
-
-  
-
-
-
-
-
-
-  constructor(private router : Router) { }
+  constructor(private router : Router, public resultadoServicio : ResultadostotalService) { }
 
   ngOnInit(): void {
+
+    console.log(this.resultadoServicio);
+
     
   }
 
