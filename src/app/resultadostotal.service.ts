@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class ResultadostotalService {
 
-  accesoFacturacion : number = 0;
+  accesoFacturacion : number=0;
+
 
 
   constructor() { }
