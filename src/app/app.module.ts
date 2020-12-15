@@ -24,6 +24,8 @@ import { DatosSocioComponent } from './principal/datos-socio/datos-socio.compone
 import { TamizajeComponent } from './principal/tamizaje/tamizaje.component';
 import { ResultadosImcComponent } from './principal/resultados-imc/resultados-imc.component';
 import { RiesgoCardioComponent } from './principal/riesgo-cardio/riesgo-cardio.component';
+import { CommonModule } from '@angular/common';
+import { ResultadostotalService } from './resultadostotal.service';
 
 
 
@@ -50,12 +52,13 @@ import { RiesgoCardioComponent } from './principal/riesgo-cardio/riesgo-cardio.c
     MatSliderModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    CommonModule
 
 
     
   ],
-  providers: [],
+  providers: [ ResultadostotalService],
   bootstrap: [AppComponent],
   entryComponents : [ PrimeroFormComponent, DatosSocioComponent]// se va a crear de manera dinamica el componente y hay que informar por aca
 })
