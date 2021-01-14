@@ -63,7 +63,7 @@ export class DatosSocioComponent implements OnInit {
 
   
 
-  submit(){
+  mostrarResultado(){
 
     console.log(this);
     console.log("Resultado");

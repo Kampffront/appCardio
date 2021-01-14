@@ -2,7 +2,7 @@
   <h1>Datos Socio Demográficos</h1>
 
 
-  <form (submit)="submit() ">
+  <form>
     <div class="form-group">
       <label for="edad">Edad</label>
       <select class="form-control" id="edad" name="edad" [(ngModel)]="model.edad">
@@ -184,8 +184,18 @@
 
       
 
-    <button type="submit" class="btn btn-success" >Calcular</button>
+    <button type="submit" class="btn btn-success" (click)="mostrarResultado()" >Calcular</button>
     <button type="button" class="btn btn-default" (click)="clickAnterior()">Atrás</button>
+
+
+    <p>Imc: {{this.model.resultadoImc}}</p>
+    <br>
+    <p>Intepretación: {{this.model.interpretacionImc}}</p>
+    <br>
+    <p>Usted tiene un peso: {{this.model.descripcionImc}}</p>
+
+
+
 
 
 
