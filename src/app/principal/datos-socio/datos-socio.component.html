@@ -126,13 +126,13 @@
 
       <div class="form-group">
           <label for="tienehijos">¿Tiene Hijos?</label>
-          <select class="form-control" id="tienehijos" name="tienehijos" [(ngModel)]="model.tieneHijos">
-              <option value="si" selected>Si</option>
+          <select class="form-control" id="tienehijos" name="tienehijos" [(ngModel)]="model.tieneHijos" >
+              <option value="si" selected >Si</option>
               <option value="no" selected>No</option>
           </select>
     </div>
 
-    <div class="form-group">
+    <div class="form-group" *ngIf="model.tieneHijos">
           <label for="cuantos">Cuantos</label>
           <input type="text" autocomplete="off" class="form-control" id="cuantos" name="cuantos" [(ngModel)]="model.cantidadHijos">
     </div>
@@ -192,7 +192,7 @@
     <br>
     <p>Intepretación: {{this.model.interpretacionImc}}</p>
     <br>
-    <p>Usted tiene un peso: {{this.model.descripcionImc}}</p>
+    <p>{{this.model.descripcionImc}}</p>
 
 
 
@@ -202,3 +202,5 @@
   </form>
 
 </div>
+
+<app-riesgo-cardio></app-riesgo-cardio>

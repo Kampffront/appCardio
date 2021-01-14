@@ -1,4 +1,6 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DatosCardio } from 'src/app/models/datos-cardio';
 import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
@@ -9,6 +11,7 @@ import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
   styleUrls: ['./riesgo-cardio.component.css']
 })
 export class RiesgoCardioComponent implements OnInit {
+  
 
   modelo2 :DatosCardio = {
 
@@ -37,7 +40,6 @@ export class RiesgoCardioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
 
   
 
