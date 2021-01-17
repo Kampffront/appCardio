@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DatosCardio } from 'src/app/models/datos-cardio';
+import { ResultadostotalService } from 'src/app/resultadostotal.service';
 import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
 
 @Component({
@@ -11,6 +12,8 @@ import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
   styleUrls: ['./riesgo-cardio.component.css']
 })
 export class RiesgoCardioComponent implements OnInit {
+
+  
   
 
   modelo2 :DatosCardio = {
@@ -31,13 +34,14 @@ export class RiesgoCardioComponent implements OnInit {
   fuma:  '',
   }
 
-  constructor(private router : Router) {
+  constructor(private router : Router, private datosCardio:  ResultadostotalService) {
 
   }
 
 
-
   ngOnInit(): void {
+
+
   }
 
 

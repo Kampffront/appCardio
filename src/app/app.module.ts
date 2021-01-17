@@ -10,8 +10,6 @@ import { environment } from '../environments/environment';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PrimeroListComponent } from './primero/primero-list/primero-list.component';
-import { PrimeroFormComponent } from './primero/primero-form/primero-form.component';
 
 //utilidades
 import { MatSliderModule } from '@angular/material/slider';
@@ -33,8 +31,6 @@ import { ResultadostotalService } from './resultadostotal.service';
 @NgModule({
   declarations: [
     AppComponent,
-    PrimeroListComponent,
-    PrimeroFormComponent,
     PrincipalBotonesComponent,
     EncuestaUnoComponent,
     DatosSocioComponent,
@@ -60,6 +56,6 @@ import { ResultadostotalService } from './resultadostotal.service';
   ],
   providers: [ ResultadostotalService],
   bootstrap: [AppComponent],
-  entryComponents : [ PrimeroFormComponent, DatosSocioComponent]// se va a crear de manera dinamica el componente y hay que informar por aca
+  entryComponents : [DatosSocioComponent]// se va a crear de manera dinamica el componente y hay que informar por aca
 })
 export class AppModule { }

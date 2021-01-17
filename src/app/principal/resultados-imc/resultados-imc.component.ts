@@ -30,7 +30,9 @@ export class ResultadosImcComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log(this.resultadoServicio);
+    this.imcMostrar = this.resultadoServicio.model.resultadoImc;
+    this.pesoMostrar = this.resultadoServicio.model.peso;
+    this.estatura = this.resultadoServicio.model.altura;
 
     
   }
