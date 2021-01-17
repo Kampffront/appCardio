@@ -24,6 +24,7 @@ import { ResultadosImcComponent } from './principal/resultados-imc/resultados-im
 import { RiesgoCardioComponent } from './principal/riesgo-cardio/riesgo-cardio.component';
 import { CommonModule } from '@angular/common';
 import { ResultadostotalService } from './resultadostotal.service';
+import { ResultadosDiabetescardioComponent } from './principal/resultados-diabetescardio/resultados-diabetescardio.component';
 
 
 
@@ -36,7 +37,8 @@ import { ResultadostotalService } from './resultadostotal.service';
     DatosSocioComponent,
     TamizajeComponent,
     ResultadosImcComponent,
-    RiesgoCardioComponent
+    RiesgoCardioComponent,
+    ResultadosDiabetescardioComponent
   ],
   imports: [
     BrowserModule,

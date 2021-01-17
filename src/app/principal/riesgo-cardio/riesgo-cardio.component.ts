@@ -16,7 +16,7 @@ export class RiesgoCardioComponent implements OnInit {
   
   
 
-  modelo2 :DatosCardio = {
+  usoDatosCardio :DatosCardio = {
 
       //riesgo diabetes y cardio 
 
@@ -28,8 +28,8 @@ export class RiesgoCardioComponent implements OnInit {
   tieneHtensionArt:  '',
 
   tomaMedicamentos:  '',
- nivelAzucar:  '',
- familiarDiabetes: '',
+  nivelAzucar:  '',
+  familiarDiabetes: '',
   diabetico: '',
   fuma:  '',
   }
@@ -41,7 +41,13 @@ export class RiesgoCardioComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.usoDatosCardio = this.datosCardio.datosCardio;
 
+
+  }
+
+  clickSiguiente(){
+    this.router.navigate(['resultadoDiabetesCardio']);
   }
 
 

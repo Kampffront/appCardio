@@ -48,8 +48,6 @@ export class DatosSocioComponent implements OnInit {
 
   }
 
-
-
   constructor(private router : Router, public datoSocio : ResultadostotalService) { }
 
   ngOnInit(): void {
@@ -61,11 +59,11 @@ export class DatosSocioComponent implements OnInit {
 
   mostrarResultado(){
 
-    console.log(this);
     console.log("Resultado");
     //ingresando y mostrando valores para calcular y determinar riesgo
     this.model1.resultadoImc=this.numbercalcularImc(this.model1.peso, this.model1.altura);
     this.model1.interpretacionImc=this.determinarRiesgoSobrePeso(this.model1.resultadoImc);
+    
 
   
     console.log("IMC :"+this.model1.resultadoImc);// resultado imc con nombre 
