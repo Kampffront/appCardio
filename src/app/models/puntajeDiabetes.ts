@@ -10,5 +10,6 @@ export interface PuntajeDiabetes {
     puntajeFamiliarDiabetes: number;
     PuntajeResultadoDiabetes : number;
 
+
     
 }

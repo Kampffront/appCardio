@@ -58,20 +58,85 @@ export class ResultadostotalService {
     diabetico: "",
     fuma: ""
   }
-
+////////////////////////////////////////////////////////
   // resultados riesgo diabetes por puntaje
-  puntajesDiabetes: PuntajeDiabetes = {
-
-    puntajeEdad: 0,
-    puntajeImc: 0,
-    puntajePerAbdominal: 0,
-    puntajeActividadFisica: 0,
-    puntajeFrutasVerduras: 0,
-    puntajeMedicamentosHipertension: 0,
-    puntajeGlucosaAlto: 0,
-    puntajeFamiliarDiabetes: 0,
-    PuntajeResultadoDiabetes: 0
+    puntajeDiabetes : PuntajeDiabetes = {
+    puntajeEdad : this.asignarPuntajeEdad(this.model.edad),
+    puntajeImc :this.asignarPuntajeImc(this.model.resultadoImc),
+    puntajePerAbdominal :this.asignarPuntajePerAbdominal(this.datosCardio.perAbdominal, this.model.genero),
+    puntajeActividadFisica :0,
+    puntajeFrutasVerduras :0,
+    puntajeMedicamentosHipertension :0,
+    puntajeGlucosaAlto :0,
+    puntajeFamiliarDiabetes:0,
+    PuntajeResultadoDiabetes :0
   }
+
+  ////asignacion de puntajes , métodos
+
+  //puntaje edad
+  asignarPuntajeEdad(edad: number){
+    if (edad<45) {
+      return 0;
+    }
+    //// se puede completar en caso de requerir mas edades
+    return 0;
+  }
+
+
+  //puntajeImc
+  asignarPuntajeImc(imc : number){
+    if (imc<25) {
+      return 0;
+    }else if (imc>=25 && imc<=30) {
+      return 1;
+      
+    } else if(imc>30) {
+      return 3;
+      
+    }else{
+      return 0;
+    }
+  }
+
+  //puntaje perimetro abdominal
+  asignarPuntajePerAbdominal(perabdominal : number, genero : string){
+    let puntaje: number=0;
+    if (genero=='masculino') {
+     puntaje =this.puntajeHombre(perabdominal);
+      
+    } else {
+      puntaje=this.puntajeMujer(perabdominal);
+    }
+
+    return puntaje;
+  }
+
+  ///// puntajes por  genero para perimetro abdominal
+  puntajeHombre(perabdominal: number){
+    let puntaje: number = 0;
+    if (perabdominal<94) {
+      puntaje = 0;
+    }else{
+      puntaje=4;
+    }
+    return puntaje;
+
+  }
+
+  puntajeMujer(perabdominal: number){
+    let puntaje : number=0;
+    if (perabdominal<90) {
+      puntaje = 0;
+    }else{
+      puntaje=4;
+    }
+    return puntaje;
+
+  }
+
+
+
 
   constructor() { }
 }
