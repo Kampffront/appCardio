@@ -260,6 +260,12 @@ export class RiesgoCardioComponent implements OnInit {
     
   }
 
+  clickAnterior(){
+    this.router.navigate(['resultadoImc']);
+    
+    
+  }
+
 
   
 
