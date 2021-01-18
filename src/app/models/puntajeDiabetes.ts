@@ -8,7 +8,8 @@ export interface PuntajeDiabetes {
     puntajeMedicamentosHipertension : number;
     puntajeGlucosaAlto : number;
     puntajeFamiliarDiabetes: number;
-    PuntajeResultadoDiabetes : number;
+    puntajeDiabetesTotal: number;
+    
 
 
     

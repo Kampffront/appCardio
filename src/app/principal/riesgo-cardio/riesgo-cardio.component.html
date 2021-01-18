@@ -51,8 +51,8 @@
       <label for="consumoVerduras">¿Con qué frecuencia consume
          verduras y frutas?</label>
       <select class="form-control" id="consumoVerduras" name="consumoVerduras" [(ngModel)]="usoDatosCardio.consumoVerduras">
-          <option value="todos los dias" selected>Todos los días</option>
-          <option value="no todos los dias" selected>No todos los días</option>
+          <option value="tdias" selected>Todos los días</option>
+          <option value="ntdias" selected>No todos los días</option>
       </select>
    </div>
 
@@ -100,7 +100,7 @@
       </select>
    </div>
 
-   <button type="submit" class="btn btn-success" (click) = "clickSiguiente()" >Resultado</button>
+   <button type="submit" class="btn btn-success"  (click)="sumarPuntajesResultadoDiabetes()">Resultado</button>
 
 
 
