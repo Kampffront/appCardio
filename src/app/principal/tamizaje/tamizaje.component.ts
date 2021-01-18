@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
-import { DatosSocioComponent } from '../datos-socio/datos-socio.component';
+
 
 @Component({
   selector: 'app-tamizaje',

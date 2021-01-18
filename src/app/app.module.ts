@@ -10,8 +10,6 @@ import { environment } from '../environments/environment';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PrimeroListComponent } from './primero/primero-list/primero-list.component';
-import { PrimeroFormComponent } from './primero/primero-form/primero-form.component';
 
 //utilidades
 import { MatSliderModule } from '@angular/material/slider';
@@ -26,6 +24,7 @@ import { ResultadosImcComponent } from './principal/resultados-imc/resultados-im
 import { RiesgoCardioComponent } from './principal/riesgo-cardio/riesgo-cardio.component';
 import { CommonModule } from '@angular/common';
 import { ResultadostotalService } from './resultadostotal.service';
+import { ResultadosDiabetescardioComponent } from './principal/resultados-diabetescardio/resultados-diabetescardio.component';
 
 
 
@@ -33,14 +32,13 @@ import { ResultadostotalService } from './resultadostotal.service';
 @NgModule({
   declarations: [
     AppComponent,
-    PrimeroListComponent,
-    PrimeroFormComponent,
     PrincipalBotonesComponent,
     EncuestaUnoComponent,
     DatosSocioComponent,
     TamizajeComponent,
     ResultadosImcComponent,
-    RiesgoCardioComponent
+    RiesgoCardioComponent,
+    ResultadosDiabetescardioComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +58,6 @@ import { ResultadostotalService } from './resultadostotal.service';
   ],
   providers: [ ResultadostotalService],
   bootstrap: [AppComponent],
-  entryComponents : [ PrimeroFormComponent, DatosSocioComponent]// se va a crear de manera dinamica el componente y hay que informar por aca
+  entryComponents : [DatosSocioComponent]// se va a crear de manera dinamica el componente y hay que informar por aca
 })
 export class AppModule { }

@@ -1,6 +1,5 @@
 <h1>Riesgo Diabetes </h1><br>
 <h1>Riesgo CardioVascular</h1>
-
 <br>
 <section>
    <p>Para medir la circunferencia de cintura, utilizar una cinta métrica. <p>        
@@ -24,15 +23,15 @@
 
 </section>
 
-<form action="">
+<form>
 
    <div class="form-group">
          <label for="perAbdominal">Perímetro abdominal</label>
-         <input type="number" autocomplete="off" class="form-control" id="perAbdominal" name="perAbdominal">
+         <input type="number" autocomplete="off" class="form-control" id="perAbdominal" name="perAbdominal"  [(ngModel)]="usoDatosCardio.perAbdominal">
    </div>
    <div class="form-group">
       <label for="tensionArterial">Tensión arterial</label>
-      <input type="number" autocomplete="off" class="form-control" id="tensionArterial" name="tensionArterial">
+      <input type="number" autocomplete="off" class="form-control" id="tensionArterial" name="tensionArterial" [(ngModel)]="usoDatosCardio.tensionArterial">
    </div>
 
    <div class="form-group">
@@ -42,7 +41,7 @@
          En este caso o si se acude a un gimnasio y se realiza entrenamiento cardiovascular y de fuerza la respuesta será sí, de lo contrario sería no. 
 
       </p>
-      <select class="form-control" id="ejercicioDiario" name="ejercicioDiario">
+      <select class="form-control" id="ejercicioDiario" name="ejercicioDiario" [(ngModel)]="usoDatosCardio.ejercicioDiario">
           <option value="si" selected>Si</option>
           <option value="no" selected>No</option>
       </select>
@@ -51,15 +50,15 @@
    <div class="form-group">
       <label for="consumoVerduras">¿Con qué frecuencia consume
          verduras y frutas?</label>
-      <select class="form-control" id="consumoVerduras" name="consumoVerduras">
-          <option value="todos los dias" selected>Todos los días</option>
-          <option value="no todos los dias" selected>No todos los días</option>
+      <select class="form-control" id="consumoVerduras" name="consumoVerduras" [(ngModel)]="usoDatosCardio.consumoVerduras">
+          <option value="tdias" selected>Todos los días</option>
+          <option value="ntdias" selected>No todos los días</option>
       </select>
    </div>
 
    <div class="form-group">
       <label for="tieneHtensionArt">¿Tiene hipertensión arterial?</label>
-      <select class="form-control" id="tieneHtensionArt" name="tieneHtensionArt">
+      <select class="form-control" id="tieneHtensionArt" name="tieneHtensionArt" [(ngModel)]="usoDatosCardio.tieneHtensionArt">
           <option value="si" selected>Si</option>
           <option value="no" selected>No</option>
       </select>
@@ -70,7 +69,7 @@
          niveles altos de azúcar en sangre,
           ej. en un control médico,
           durante una  enfermedad, o durante el embarazo)?</label>
-      <select class="form-control" id="nivelAzucar" name="nivelAzucar">
+      <select class="form-control" id="nivelAzucar" name="nivelAzucar" [(ngModel)]="usoDatosCardio.nivelAzucar">
           <option value="si" selected>Si</option>
           <option value="no" selected>No</option>
       </select>
@@ -78,7 +77,7 @@
 
    <div class="form-group">
       <label for="familiarDiabetes">¿Alguien en su familia está diagnosticado con diabetes? </label>
-      <select class="form-control" id="familiarDiabetes" name="familiarDiabetes">
+      <select class="form-control" id="familiarDiabetes" name="familiarDiabetes" [(ngModel)]="usoDatosCardio.familiarDiabetes">
           <option value="si opcion padre" selected>Sí: padres, hermanos, hijos</option>
           <option value="si abuelo" selected>Si: abuelos, tíos, primos</option>
           <option value="no" selected>No</option>
@@ -87,7 +86,7 @@
 
    <div class="form-group">
       <label for="diabetico">¿Es diabético?</label>
-      <select class="form-control" id="diabetico" name="diabetico">
+      <select class="form-control" id="diabetico" name="diabetico" [(ngModel)]="usoDatosCardio.diabetico">
           <option value="si" selected>Si</option>
           <option value="no" selected>No</option>
       </select>
@@ -95,16 +94,22 @@
 
    <div class="form-group">
       <label for="fuma">¿Fuma o consume algún producto derivado del tabaco?      </label>
-      <select class="form-control" id="fuma" name="fuma">
+      <select class="form-control" id="fuma" name="fuma" [(ngModel)]="usoDatosCardio.fuma">
           <option value="si" selected>Si</option>
           <option value="no" selected>No</option>
       </select>
    </div>
 
+   <button type="submit" class="btn btn-success"  (click)="sumarPuntajesResultadoDiabetes()" (click)="clickSiguiente()">Resultado</button>
+   <button mat-flat-button class="boton-azul color-texto" (click)="clickAnterior()" >Anterior</button> <br>
+
+
+
+
 </form>
 
 
-<button type="button" class="btn btn-success" >Resultado</button>
+
 
 
 
