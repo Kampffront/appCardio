@@ -66,7 +66,7 @@ export class ResultadostotalService {
 
   //datos puntaje parte 2 , informacion agregada.
 
-  puntajeDiabetes : PuntajeDiabetes = {
+  puntajeDiabetesServicio : PuntajeDiabetes = {
     puntajeEdad : 0,
     puntajeImc :0,
     puntajePerAbdominal :0,
@@ -146,6 +146,188 @@ export class ResultadostotalService {
 
   ////////////////////////////////////////////////////////////////////////////////////////////
   // metodos para calcular diabetes y puntaje
+
+  sumarPuntajesResultadoDiabetes(puntajeDiabetes2 :PuntajeDiabetes){
+    puntajeDiabetes2.puntajeEdad=this.asignarPuntajeEdad(this.model.edad);
+    puntajeDiabetes2.puntajeImc=this.asignarPuntajeImc(this.model.resultadoImc);
+    puntajeDiabetes2.puntajePerAbdominal=this.asignarPuntajePerAbdominal(this.datosCardio.perAbdominal,this.model.genero);
+    puntajeDiabetes2.puntajeActividadFisica=this.asignarPuntajeActiFisica(this.datosCardio.ejercicioDiario);
+    puntajeDiabetes2.puntajeFrutasVerduras=this.asignarPuntajeFrutasVerdu(this.datosCardio.consumoVerduras);
+    puntajeDiabetes2.puntajeMedicamentosHipertension=this.asignarPuntajeMedicamentosHiper(this.datosCardio.tomaMedicamentos);
+    puntajeDiabetes2.puntajeGlucosaAlto=this.asignarPuntajeGlucosaAlto(this.datosCardio.nivelAzucar);
+    puntajeDiabetes2.puntajeFamiliarDiabetes=this.asignarPuntajeFamiliaDiabetico(this.datosCardio.familiarDiabetes);
+
+    puntajeDiabetes2.puntajeDiabetesTotal=this.asignarPuntajeResultadoDiabetes(
+    puntajeDiabetes2.puntajeEdad,
+    puntajeDiabetes2.puntajeImc,
+    puntajeDiabetes2.puntajePerAbdominal,
+    puntajeDiabetes2.puntajeActividadFisica,
+    puntajeDiabetes2.puntajeFrutasVerduras,
+    puntajeDiabetes2.puntajeMedicamentosHipertension,
+    puntajeDiabetes2.puntajeGlucosaAlto,
+    puntajeDiabetes2.puntajeFamiliarDiabetes);
+    console.log(puntajeDiabetes2.puntajeDiabetesTotal);
+    console.log(puntajeDiabetes2);
+      
+  }
+
+
+asignarPuntajeResultadoDiabetes(
+  edad:number,
+  imc: number,
+  perAbdom: number,
+  actFisica : number,
+  frutasYver: number,
+  medicamentoHiper: number,
+  glucosaAlto: number,
+  familiarDiabetes: number
+  ){
+
+    let puntajeTotal: number;
+    return puntajeTotal= edad+imc+perAbdom+actFisica+frutasYver+medicamentoHiper+glucosaAlto+familiarDiabetes;
+    
+
+}
+
+
+
+//puntaje edad
+asignarPuntajeEdad(edad: number){
+  if (edad<45) {
+    return 0;
+  }
+  //// se puede completar en caso de requerir mas edades
+  return 0;
+}
+
+
+//puntajeImc
+asignarPuntajeImc(imc : number){
+  if (imc<25) {
+    return 0;
+  }else if (imc>=25 && imc<=30) {
+    return 1;
+    
+  } else if(imc>30) {
+    return 3;
+    
+  }else{
+    return 0;
+  }
+}
+
+//puntaje perimetro abdominal
+asignarPuntajePerAbdominal(perabdominal : number, genero : string){
+  let puntaje: number=0;
+  if (genero=='masculino') {
+   puntaje =this.puntajeHombre(perabdominal);
+    
+  } else {
+    puntaje=this.puntajeMujer(perabdominal);
+  }
+
+  return puntaje;
+}
+
+///// puntajes por  genero para perimetro abdominal
+puntajeHombre(perabdominal: number){
+  let puntaje: number = 0;
+  if (perabdominal<94) {
+    puntaje = 0;
+  }else{
+    puntaje=4;
+  }
+  return puntaje;
+
+}
+
+puntajeMujer(perabdominal: number){
+  let puntaje : number=0;
+  if (perabdominal<90) {
+    puntaje = 0;
+  }else{
+    puntaje=4;
+  }
+  return puntaje;
+
+}
+
+//////puntaje actividad fisica
+asignarPuntajeActiFisica(actividadFisica: string){
+  let puntaje: number=0;
+  if (actividadFisica=='si') {
+    puntaje=0;
+    
+  } else {
+    puntaje=2;
+    
+  }
+
+  return puntaje;
+
+}
+
+  //////puntaje Frutas y verduras
+  asignarPuntajeFrutasVerdu(frutasVerdu: string){
+    let puntaje: number=0;
+    if (frutasVerdu=='tdias') {
+      puntaje=0;
+      
+    } else {
+      puntaje=1;
+      
+    }
+
+    return puntaje;
+
+  }
+
+    //////puntaje  Medicamentos para hipertension
+asignarPuntajeMedicamentosHiper(puntajeMedicamentosHiper: string){
+  let puntaje: number=0;
+  if (puntajeMedicamentosHiper=='si') {
+    puntaje=2;
+    
+  } else {
+    puntaje=0;
+    
+  }
+
+  return puntaje;
+
+}
+
+  //////puntaje glucosa alto
+  asignarPuntajeGlucosaAlto(glucosa: string){
+    let puntaje: number=0;
+    if (glucosa=='si') {
+      puntaje=5;
+      
+    } else {
+      puntaje=0;
+      
+    }
+
+    return puntaje;
+
+  }
+
+      //////puntaje familia diabeticos /// mirar plantilla riesgo-cardio html
+      asignarPuntajeFamiliaDiabetico(familiarDiabetico: string){
+        let puntaje: number=0;
+        if (familiarDiabetico=='no') {
+          puntaje=0;
+          
+        } else if(familiarDiabetico=="si opcion padre") {
+          puntaje=5;
+          
+        }else{
+          puntaje=3;
+        }
+    
+        return puntaje;
+    
+      }
 }
 
 

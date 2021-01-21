@@ -36,7 +36,7 @@ export class ResultadosDiabetescardioComponent implements OnInit {
      ) { }
 
   ngOnInit(): void {
-    this.PuntajeMuestra= this.puntajeDiabetesServicio.puntajeDiabetes.puntajeDiabetesTotal;
+    this.PuntajeMuestra= this.puntajeDiabetesServicio.puntajeDiabetesServicio.puntajeDiabetesTotal;
     this.resultadoInformacionRiesgoDiabetes(this.PuntajeMuestra);
 
 
@@ -66,7 +66,7 @@ export class ResultadosDiabetescardioComponent implements OnInit {
    
 
   finalEncuesta(){
-    console.log(this.puntajeDiabetesServicio.puntajeDiabetes)
+    console.log(this.puntajeDiabetesServicio);
 
   this.router.navigate(['principal']);
   }
