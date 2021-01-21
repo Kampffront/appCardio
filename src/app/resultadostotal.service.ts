@@ -24,6 +24,7 @@ export class ResultadostotalService {
     nivelEducativo: '',
     estrato: '',
     regimenSalud: '',
+    eps: '',
     zonaResidencia: '',
     direccion: '',
     estudiaActual: '',
@@ -166,8 +167,6 @@ export class ResultadostotalService {
     puntajeDiabetes2.puntajeMedicamentosHipertension,
     puntajeDiabetes2.puntajeGlucosaAlto,
     puntajeDiabetes2.puntajeFamiliarDiabetes);
-    console.log(puntajeDiabetes2.puntajeDiabetesTotal);
-    console.log(puntajeDiabetes2);
       
   }
 

@@ -95,6 +95,11 @@
     </div>
 
     <div class="form-group">
+            <label for="eps">Eps</label>
+            <input type="text" autocomplete="off" class="form-control" id="eps" name="eps" [(ngModel)]="model1.eps">
+      </div>
+
+    <div class="form-group">
           <label for="zonaresidencia">Zona de Residencia</label>
           <select class="form-control" id="zonaresidencia" name="zonaresidencia" [(ngModel)]="model1.zonaResidencia">
               <option value="rural" selected>rural</option>
@@ -192,10 +197,6 @@
     <p>Intepretación: {{this.model1.interpretacionImc}}</p>
     <br>
     <p>{{this.model1.descripcionImc}}</p>
-
-
-
-
 
 
   </form>

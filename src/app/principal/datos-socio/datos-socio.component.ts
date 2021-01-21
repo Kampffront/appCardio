@@ -29,6 +29,7 @@ export class DatosSocioComponent implements OnInit {
   nivelEducativo:'',
   estrato:'',
   regimenSalud:'',
+  eps: '',
   zonaResidencia:'',
   direccion: '',
   estudiaActual: '',
