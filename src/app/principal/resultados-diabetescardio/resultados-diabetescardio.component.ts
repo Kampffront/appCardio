@@ -16,6 +16,7 @@ export class ResultadosDiabetescardioComponent implements OnInit {
   public nivelRiesgoDiabetesMuestra : string ="";
   public descripcionDiabetesMuestra : string ="";
   
+  
   //variables informativas riesgo cardiovascular
 
 
