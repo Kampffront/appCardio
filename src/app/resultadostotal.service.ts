@@ -78,6 +78,16 @@ export class ResultadostotalService {
     puntajeFamiliarDiabetes:0,
     puntajeDiabetesTotal:0
   }
+
+  ////////////////////////////////////////////////////////////////////////////////////////////
+  // Datos puntaje y resultados Riesgo Cardiovascular
+  color : string[]=["verde","amarillo","naranja","rojo","rojoOscuro"];
+  resultadoNivelRiesgoCardio : number=0;
+  descripcionNivelRiesgoCardio: string ="";
+
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////
   // metodos para calcular imc y puntaje imc
   
@@ -327,6 +337,51 @@ asignarPuntajeMedicamentosHiper(puntajeMedicamentosHiper: string){
         return puntaje;
     
       }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+  // metodos para calcular riesgoCardioVascular
+
+  calcularColorRiesgoCardio(
+        diabetes: string,
+         genero : string,
+         fuma: string,
+         pas : number
+         ){
+           if (diabetes=="no" && genero=="masculino" && fuma=="no") {///
+
+
+
+             
+           } else {
+             
+           }
+           
+
+
+
+
+
+  }
+  ///calcular color con pas///////////////////////////7
+  calcularPuntajeRiesgoCardio(pas : number){
+    if (pas>0 && pas<120) {
+      
+    }
+  }
+
+
+  
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
