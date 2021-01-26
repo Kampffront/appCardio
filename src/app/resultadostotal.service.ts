@@ -341,36 +341,64 @@ asignarPuntajeMedicamentosHiper(puntajeMedicamentosHiper: string){
         ////////////////////////////////////////////////////////////////////////////////////////////
   // metodos para calcular riesgoCardioVascular
 
-  calcularColorRiesgoCardio(
-        diabetes: string,
-         genero : string,
-         fuma: string,
-         pas : number
-         ){
-           if (diabetes=="no" && genero=="masculino" && fuma=="no") {///
+  calcularColorRiesgoCardio(diabetes: string,genero : string,fuma: string){// calcular colores de izquierda a derecha segun el guion
 
+          let color : string[]=["1","2","3","4"];
+           if (diabetes=="no" && genero=="masculino" && fuma=="no") {///primera columna
 
+            return color =["naranja","verde","verde","verde"];
+ 
+           } else if(diabetes=="no" && genero=="masculino" && fuma=="si") {///segunda columna ) {
+            return color =["rojoOscuro","amarillo","verde","verde"];
 
-             
-           } else {
-             
+           }else if(diabetes=="no" && genero=="femenino" && fuma=="no") {///tercera  columna ) {
+            return color =["rojo","verde","verde","verde"];
+
+           }else if(diabetes=="no" && genero=="femenino" && fuma=="si") {///cuarta columna ) {
+            return color =["rojoOscuro","amarillo","verde","verde"];
+
+           }else if(diabetes=="si" && genero=="masculino" && fuma=="no") {///quinta columna ) {
+            return color =["rojo","verde","verde","verde"];
+
+           }else if(diabetes=="si" && genero=="masculino" && fuma=="si") {///sexta columna ) {
+            return color =["rojoOscuro","naranja","verde","verde"];
+
+           }else if(diabetes=="si" && genero=="femenino" && fuma=="no") {///septima columna ) {
+            return color =["rojoOscuro","amarillo","verde","verde"];
+
+           }else if(diabetes=="si" && genero=="femenino" && fuma=="si") {///octava columna ) {
+            return color =["rojoOscuro","rojo","verde","verde"];
+           }else{
+
+            return color =["valor no definido","rvalor no definido","valor no definido","valor no definido"];
+
            }
-           
-
-
-
 
 
   }
-  ///calcular color con pas///////////////////////////7
-  calcularPuntajeRiesgoCardio(pas : number){
-    if (pas>0 && pas<120) {
+  ///calcular porcentaje con pas///////////////////////////7
+  calcularPorcentajeRiesgoCardio  (pas : number, color:string[3]){
+
+    if (pas>0 && pas<=120) {
+      return  color[3];
       
+    }else if(pas>120 && pas<=140){
+      return color[2];
+
+    }else if(pas>140 && pas<=160){
+      return color[1];
+
+    }else if(pas>160 && pas<=180){
+      return color[0];
     }
-  }
+      else{
+
+        return "demasiado alto"; 
+        
+      }
 
 
-  
+    }
 
 }
 
