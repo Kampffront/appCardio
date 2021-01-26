@@ -1,7 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files /////////////////////////////////////////*/
 
 @import url(bulma/css/bulma.css);
-
 
 
 body { margin: 0; 
@@ -15,7 +14,32 @@ h1{
 font-family: Titillium, 'Titillium Web', sans-serif  ;
 font-weight: 700;
 font-size: 2rem;
+
 }
+
+h2{
+	font-family: Titillium, 'Titillium Web', sans-serif  ;
+	font-weight: 700;
+	font-size: 2rem;
+  }
+
+
+
+.colorTitulos{
+	color: #F8A851;
+}
+
+.colorTituloPrincipal{
+	color: #D7DCF5;
+
+}
+
+.colorParrafos{
+	color: #1c1c1c;
+
+}
+
+/* Boton principal/////////////////////////////////////// /////////////////////////////////////////*/
 
 .myButtonMain {
 	box-shadow: 0px 0px 0px 0px #303e4f;
@@ -40,6 +64,7 @@ font-size: 2rem;
 	top:1px;
 }
 
+/* Boton atras ///////////////////////////////////////////////////// /////////////////////////////////////////*/
 .myButtonBack {
 	box-shadow: 0px 0px 0px 0px #303e4f;
 	background-color:#AFAEAD;
@@ -63,23 +88,47 @@ font-size: 2rem;
 	top:1px;
 }
 
+/* Boton siguiente naranja/////////////////////////////////////// /////////////////////////////////////////*/
 
-h2{
-  font-family: Titillium, 'Titillium Web', sans-serif  ;
-  font-weight: 700;
-  font-size: 2rem;
+.myButtonSig {
+	box-shadow: 0px 0px 0px 0px #A97134;
+	background-color:#FBA74D;
+	border-radius:28px;
+	border:0px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Titillium, 'Titillium Web', sans-serif;
+	font-size:17px;
+	padding:16px 59px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #4e6f99;
+  
+}
+.myButtonBack:hover {
+	background-color:#6292d1;
+}
+.myButtonBack:active {
+	position:relative;
+	top:1px;
 }
 
 
+
+
+
+/* fondo uno color superior /////////////////////////////////////// /////////////////////////////////////////*/
 .fondo{
   background-image: url("assets/ilustraciones/trazadoMenu.svg");
   background-size:cover;
+
+ 
 
 /* Para dejar la imagen de fondo centrada, vertical y
 
 horizontalmente */
 
-background-position: center center;
+background-position: center ;
 
 /* Para que la imagen de fondo no se repita */
 
@@ -97,6 +146,35 @@ de fondo o si hay problemas para cargarla */
 
 }
 
+
+/* fondo dos color inferior /////////////////////////////////////// /////////////////////////////////////////*/
+.fondoDos{
+	background-image: url("assets/ilustraciones/trazadoMenuInferior.svg");
+	background-size:cover;
+  
+   
+  
+  /* Para dejar la imagen de fondo centrada, vertical y
+  
+  horizontalmente */
+  
+  background-position: center ;
+  
+  /* Para que la imagen de fondo no se repita */
+  
+  background-repeat: no-repeat;
+  
+  /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+  
+  
+  
+  /* Se muestra un color de fondo mientras se está cargando la imagen
+  
+  de fondo o si hay problemas para cargarla */
+  
+  
+  
+  }
 
 
 

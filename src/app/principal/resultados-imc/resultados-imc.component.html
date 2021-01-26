@@ -1,25 +1,34 @@
-<h1>Resultados</h1>
-<h2>IMC</h2>
-<p>{{imcMostrar}}</p>
+<div class="container"><h1>Resultados</h1>
+    <div class="row">
+        <div class="col">
+            <h2>IMC</h2>
+            <p>{{imcMostrar}}</p>
 
-<p>"mostrar imagen segun peso</p>
-<app-imagen-imc></app-imagen-imc>
+            <p>"mostrar imagen segun peso</p>
+            <app-imagen-imc></app-imagen-imc>
+            <div class=row>
+                <div class="col">
+                    <h2>Peso</h2>
+                    <p>{{pesoMostrar}} Kg</p>
+                </div>
 
+                <div class="col">
 
+                    <h2>Estatura</h2>
+                    <p>{{estatura}} Mts</p>
+                </div>
+            </div>
 
+            <p>Descripcion segun resultado </p>
+            <p>{{descripcion}}</p>
 
-    <h2>Peso</h2>
-    <p>{{pesoMostrar}} Kg</p>
+            <div class="ajustar-contenido ">
 
-    <h2>Estatura</h2>
-    <p>{{estatura}} Mts</p>
+                <button  class="myButtonSig" (click)="clickSiguiente()" >Siguiente Apartado</button> <br><br>
+                <button  class="myButtonBack" (click)="clickAnterior()" >Anterior</button> <br>
+            </div>
+        </div>
+    </div>
 
-<p>Descripcion segun resultado </p>
-<p>{{descripcion}}</p>
-
-<div class="ajustar-contenido ">
-
-    <button mat-flat-button class="button is-medium is-link is-rounded is-focused block" (click)="clickSiguiente()" >Siguiente Apartado</button> <br>
-    <button mat-flat-button class="boton-azul color-texto" (click)="clickAnterior()" >Anterior</button> <br>
 </div>
 

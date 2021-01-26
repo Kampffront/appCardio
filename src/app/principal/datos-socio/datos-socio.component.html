@@ -1,4 +1,4 @@
-<div class='container-fluid'>
+<div class='container-fluid colorTitulos fondoDos'>
   <h1>Datos Socio Demográficos</h1>
 
 
@@ -188,15 +188,9 @@
 
       
 
-    <button type="submit" class="btn btn-success" (click)="mostrarResultado()" (click) ="clickSiguiente()" >Calcular</button>
-    <button type="button" class="btn btn-default" (click)="clickAnterior()">Atrás</button>
+    <button type="submit" class="myButtonSig" (click)="mostrarResultado()" (click) ="clickSiguiente()" >Calcular</button><br><br>
+    <button type="button" class="myButtonBack" (click)="clickAnterior()">Atrás</button>
 
-
-    <p>Imc: {{this.model1.resultadoImc}}</p>
-    <br>
-    <p>Intepretación: {{this.model1.interpretacionImc}}</p>
-    <br>
-    <p>{{this.model1.descripcionImc}}</p>
 
 
   </form>
