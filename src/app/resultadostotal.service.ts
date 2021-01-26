@@ -81,8 +81,8 @@ export class ResultadostotalService {
 
   ////////////////////////////////////////////////////////////////////////////////////////////
   // Datos puntaje y resultados Riesgo Cardiovascular
-  color : string[]=["verde","amarillo","naranja","rojo","rojoOscuro"];
-  resultadoNivelRiesgoCardio : number=0;
+  colores : string[]=["verde","amarillo","naranja","rojo"];
+  resultadoNivelRiesgoCardio : string="";
   descripcionNivelRiesgoCardio: string ="";
 
 
@@ -341,6 +341,17 @@ asignarPuntajeMedicamentosHiper(puntajeMedicamentosHiper: string){
         ////////////////////////////////////////////////////////////////////////////////////////////
   // metodos para calcular riesgoCardioVascular
 
+  asignarColorArreglo(arreglo : string[]){
+    return arreglo= this.calcularColorRiesgoCardio(this.datosCardio.diabetico, this.model.genero, this.datosCardio.fuma);
+
+  }
+
+  asignarColorFinal(){
+    return this.calcularPorcentajeRiesgoCardio(this.datosCardio.tensionArterial,
+      this.colores);
+
+  }
+
   calcularColorRiesgoCardio(diabetes: string,genero : string,fuma: string){// calcular colores de izquierda a derecha segun el guion
 
           let color : string[]=["1","2","3","4"];
@@ -376,29 +387,61 @@ asignarPuntajeMedicamentosHiper(puntajeMedicamentosHiper: string){
 
 
   }
-  ///calcular porcentaje con pas///////////////////////////7
-  calcularPorcentajeRiesgoCardio  (pas : number, color:string[3]){
+  ///calcular porcentaje con pas///////////////////////////7////// 
+  calcularPorcentajeRiesgoCardio  (pas : number, color:string[]){
+    let colorResuelto=this.asignarColorArreglo(color);
+
+    //se define segun la columna de abajo hacia arriba
+
 
     if (pas>0 && pas<=120) {
-      return  color[3];
+      return  colorResuelto[3];///color barra inferior 1
       
     }else if(pas>120 && pas<=140){
-      return color[2];
+      return colorResuelto[2];///color barra inferior 2
 
     }else if(pas>140 && pas<=160){
-      return color[1];
+      return colorResuelto[1];///color barra inferior 3
 
     }else if(pas>160 && pas<=180){
-      return color[0];
+      return colorResuelto[0];///color barra inferior 4
     }
       else{
 
-        return "demasiado alto"; 
+        return "demasiado alto"; ///color barra inferior en caso de que sea superior a 180
         
       }
 
 
     }
+
+    mostrarRiesgoCardio(colorFinal: string){/////// mostrar informacion final pendiente por modificar porcentajes para calcularlos
+      let porcentaje: string="";
+    
+      if (colorFinal=="verde") {
+        return porcentaje="menor de 10%";
+
+
+      } else if(colorFinal=="amarillo"){
+        return porcentaje="de 10% a 20%";
+  
+      }else if(colorFinal=="naranja"){
+        return porcentaje="de 20% a 30%";
+  
+      }else if(colorFinal=="rojo"){
+        return porcentaje="de 30% a 40%";
+  
+      } else if(colorFinal=="rojoOscuro"){
+      return porcentaje="mas de 40%";
+      }
+      else{
+
+        return "falta falta"
+      }
+
+
+
+}
 
 }
 

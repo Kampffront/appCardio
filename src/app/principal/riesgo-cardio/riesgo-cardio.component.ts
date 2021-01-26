@@ -21,7 +21,7 @@ export class RiesgoCardioComponent implements OnInit {
 
   usoDatosCardio :DatosCardio = {
 
-      //riesgo diabetes y cardio 
+      //riesgo diabetes y cardio //////////////////////////
 
   perAbdominal: 0,
   tensionArterial:0,
@@ -36,8 +36,12 @@ export class RiesgoCardioComponent implements OnInit {
   diabetico: '',
   fuma:  '',
   }
+  
+   puntaje : PuntajeDiabetes;///se define el puntaje para usarlo en este componente;
+   
 
-   puntaje : PuntajeDiabetes;
+
+
 
   
 
@@ -56,8 +60,10 @@ export class RiesgoCardioComponent implements OnInit {
 
   }
 
-  mostrarResultadoDiabetes(){
-    this.datosCardioServicio.sumarPuntajesResultadoDiabetes(this.puntaje);
+  mostrarResultadoDiabetesYCardio(){
+    this.datosCardioServicio.sumarPuntajesResultadoDiabetes(this.puntaje);// se ingresa el puntaje obtenido para mostrarlo
+
+
 
   }
 
