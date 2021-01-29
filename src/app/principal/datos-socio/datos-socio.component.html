@@ -1,4 +1,4 @@
-<div class='container-fluid'>
+<div class='container-fluid colorTitulos fondoDos'>
   <h1>Datos Socio Demográficos</h1>
 
 
@@ -22,17 +22,16 @@
 
 
     <div class="form-group">
-      <label for="nombre">Nombre</label>
-      <input type="text" autocomplete="off" class="form-control" id="nombre" name="nombre" [(ngModel)]="model1.nombre">
-    </div>
-
-
-    <div class="form-group">
       <label for="tipodocumento">Tipo de Documento</label>
       <select class="form-control" id="tipodocumento" name="tipodocumento" [(ngModel)]="model1.tipoDoc">
         <option value="cedula-ciudadania" selected>Cédula de ciudadanía </option>
         <option value="cedula-extranjeria" selected>Cédula de extranjería </option>
       </select>
+    </div>
+
+    <div class="form-group">
+      <label for="nombre">Número de Documento</label>
+      <input type="number" autocomplete="off" class="form-control" id="numerodocumento" name="numerodocumento" [(ngModel)]="model1.cedulanum">
     </div>
 
 
@@ -94,6 +93,11 @@
 
           </select>
     </div>
+
+    <div class="form-group">
+            <label for="eps">Eps</label>
+            <input type="text" autocomplete="off" class="form-control" id="eps" name="eps" [(ngModel)]="model1.eps">
+      </div>
 
     <div class="form-group">
           <label for="zonaresidencia">Zona de Residencia</label>
@@ -184,18 +188,8 @@
 
       
 
-    <button type="submit" class="btn btn-success" (click)="mostrarResultado()" (click) ="clickSiguiente()" >Calcular</button>
-    <button type="button" class="btn btn-default" (click)="clickAnterior()">Atrás</button>
-
-
-    <p>Imc: {{this.model1.resultadoImc}}</p>
-    <br>
-    <p>Intepretación: {{this.model1.interpretacionImc}}</p>
-    <br>
-    <p>{{this.model1.descripcionImc}}</p>
-
-
-
+    <button type="submit" class="myButtonSig" (click)="mostrarResultado()" (click) ="clickSiguiente()" >Calcular</button><br><br>
+    <button type="button" class="myButtonBack" (click)="clickAnterior()">Atrás</button>
 
 
 

@@ -12,6 +12,7 @@ export interface Datosvariables {
         nivelEducativo: string;
         estrato: string ;
         regimenSalud: string;
+        eps: string;
         zonaResidencia: string;
         direccion: string;
         estudiaActual: string;

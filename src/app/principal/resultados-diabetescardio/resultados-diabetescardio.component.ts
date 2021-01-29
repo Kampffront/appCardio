@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PuntajeDiabetes } from 'src/app/models/puntajeDiabetes';
 import { ResultadostotalService } from 'src/app/resultadostotal.service';
 
 
@@ -16,30 +15,31 @@ export class ResultadosDiabetescardioComponent implements OnInit {
   public nivelRiesgoDiabetesMuestra : string ="";
   public descripcionDiabetesMuestra : string ="";
   
+  
   //variables informativas riesgo cardiovascular
-
-
-  public riesgoCardioPorcentajeMuestra : number = 0;
+  public riesgoCardioPorcentajeMuestra : string = "";
   public nivelRiesgoCardioMuestra : string ="";
+  public colorFinal : string="";
 
   
-  
-  
-  
+
 
 
   constructor(private router : Router,
     private puntajeDiabetesServicio : ResultadostotalService
-
-
      ) { }
 
-  ngOnInit(): void {
-    this.PuntajeMuestra= this.puntajeDiabetesServicio.puntajeDiabetes.puntajeDiabetesTotal;
+  ngOnInit(): void {// se inicializan los valores con los valores del servicio
+    this.PuntajeMuestra= this.puntajeDiabetesServicio.puntajeDiabetesServicio.puntajeDiabetesTotal;
+
     this.resultadoInformacionRiesgoDiabetes(this.PuntajeMuestra);
 
 
+    //valores cardio para sacar resultados
+    this.colorFinal=this.puntajeDiabetesServicio.asignarColorFinal();
+    this.riesgoCardioPorcentajeMuestra= this.puntajeDiabetesServicio.mostrarRiesgoCardio(this.colorFinal);
   
+
 
 
   }
@@ -56,16 +56,22 @@ export class ResultadosDiabetescardioComponent implements OnInit {
       this.descripcionDiabetesMuestra="Usted tiene un riesgo alto de tener diabetes y prediabetes. Sugerimos que usted pida una cita a su EPS o su médico para  que le realice una prueba de glicemia en ayuno y reciba  consejo sobre cómo cambiar sus hábitos de vida para mejorar  su salud.";
     }
 
-    
-
-
   }
+
+
+
+  
+
+
+
+
+  
 
 
    
 
   finalEncuesta(){
-    console.log(this.puntajeDiabetesServicio.puntajeDiabetes)
+    console.log(this.puntajeDiabetesServicio);
 
   this.router.navigate(['principal']);
   }

@@ -5,7 +5,7 @@ export interface DatosCardio {
     perAbdominal: number ;
     tensionArterial: number;
     ejercicioDiario: string ;
-  
+
     consumoVerduras: string;
     tieneHtensionArt: string;
 

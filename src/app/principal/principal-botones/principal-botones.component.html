@@ -1,21 +1,19 @@
-<div class="contenido">
-    <br>
-   
-    <h1>{{titulo}}</h1>
-    <br>
+<div class="container-fluid fondo">
+    <div class=row>>
+        <div class=col-sm>
+            <br>
 
+            <h1 clas="colorTituloPrincipal">{{titulo}}</h1>
+            <br>
+            <div>
+                <button class="myButtonMain" (click)="clickSiguiente()">Realizar Encuesta</button> <br><br><br>
+                <button class="myButtonMain"> Consultar Historico Encuesta</button> <br><br><br>
+                <button class="myButtonMain"> Consultar Resultado Encuesta</button> <br><br><br>
+                <button class="myButtonBack"> Anterior</button> <br><br><br>
 
-
-
-
-
-    <div>
-
-        <button class="button is-medium is-link is-rounded is-focused block" (click)="clickSiguiente()" >Realizar Encuesta</button> <br>
-        <button class="button is-medium is-link is-rounded is-focused block" > Consultar Historico Encuesta</button> <br>
-        <button class="button is-medium is-link is-rounded is-focused block" > Consultar Resultado Encuesta</button> <br>
-        <button class="button is-medium is-dark is-rounded is-focused block" > Anterior</button> <br>
-    </div>
+            </div>
+        </div>
+    </div> 
 
 </div>
 
