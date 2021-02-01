@@ -1,23 +1,32 @@
-
+<div class="container-fluid fondoDos text-center">
     <h1>Resultados </h1>
-    <h2>Riesgo Diabetes</h2>
-    <h3>Puntaje<h3>
-            <p>{{PuntajeMuestra}}</p>
+    <div>
+        <h2>Riesgo Diabetes</h2>
+        <h3>Puntaje</h3>
+        <p>{{PuntajeMuestra}}</p>
 
-            <h3>Nivel de Riesgo</h3>
-            <p>{{nivelRiesgoDiabetesMuestra}}</p>
+        <p>{{PuntajeMuestra}}</p>
+        <h3>Nivel de Riesgo</h3>
+        <p>{{nivelRiesgoDiabetesMuestra}}</p>
+        <p>{{descripcionDiabetesMuestra}}</p>
+    </div>
 
-            <p>{{descripcionDiabetesMuestra}}</p>
+    <div>
+        <h2>Riesgo Cardiovascular</h2>
+        <h3>Porcentaje: {{riesgoCardioPorcentajeMuestra}}</h3>
+        <p>nivel de riesgo</p>
+    </div>
 
-            <h2>Riesgo Cardiovascular</h2>
+    <div class="ajustar-contenido">
 
-            <h3>Porcentaje: {{riesgoCardioPorcentajeMuestra}}</h3>
-            <p>nivel de riesgo</p>
+        <button class="myButtonSig" (click)="finalEncuesta()">Finalizar</button> <br><br>
+        <button class="myButtonBack" (click)="clickAnterior()">Anterior</button> <br>
+    </div>
+</div>
+    
 
 
-            <div class="ajustar-contenido ">
 
-                <button class="myButtonSig" (click)="finalEncuesta()">Finalizar</button> <br>
-                <button class="myButtonBack" (click)="clickAnterior()">Anterior</button> <br>
-            </div>
+
+
 
