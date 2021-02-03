@@ -1,112 +1,113 @@
-<h1>Riesgo Diabetes </h1><br>
-<h1>Riesgo CardioVascular</h1>
-<br>
-<section>
-   <p>Para medir la circunferencia de cintura, utilizar una cinta métrica. <p>        
-   <p> Para la medición:</p>
-   <ol start="a">   
-      <li>Descubrir el abdomen. No realizarla sobre la ropa sino sobre la piel.</li> 
-      <li> Colocar la cinta métrica alrededor del abdomen, a nivel donde se nota la estrechez natural de la  cintura, que es el punto medio entre el reborde de la última costilla y la cresta ilíaca o hueso de la  cadera, aproximadamente a nivel del ombligo.</li>
-            
-      <li> Respirar normal o hablar (no sostener la respiración).</li>
-             
-      <li> Registrar el dato al 1 cm más cercano, sosteniendo firme la cinta métrica sin hacer presión excesiva.</li>
+<div class="container-fluid colorTitulos fondoDos text-center">
+   <h1>Riesgo Diabetes </h1><br>
+   <h1>Riesgo CardioVascular</h1>
+   <br>
+   <section>
+      <p>Para medir la circunferencia de cintura, utilizar una cinta métrica. <p>        
+      <p> Para la medición:</p>
+      <ol start="a">   
+         <li>Descubrir el abdomen. No realizarla sobre la ropa sino sobre la piel.</li> 
+         <li> Colocar la cinta métrica alrededor del abdomen, a nivel donde se nota la estrechez natural de la  cintura, que es el punto medio entre el reborde de la última costilla y la cresta ilíaca o hueso de la  cadera, aproximadamente a nivel del ombligo.</li>
+               
+         <li> Respirar normal o hablar (no sostener la respiración).</li>
+               
+         <li> Registrar el dato al 1 cm más cercano, sosteniendo firme la cinta métrica sin hacer presión excesiva.</li>
 
-   </ol>
-   <p>
+      </ol>
+      <p>
 
-      Escribir la cifra en centímetros. Nótese que es un número entero, sin decimales.
-      Ejemplos: si la cifra es  94,3 centímetros, anote 94; si la medición dio 105,8 centímetros, anote 106.
-
-   </p>
-   <br><br>
-
-</section>
-
-<form>
-
-   <div class="form-group">
-         <label for="perAbdominal">Perímetro abdominal</label>
-         <input type="number" autocomplete="off" class="form-control" id="perAbdominal" name="perAbdominal"  [(ngModel)]="usoDatosCardio.perAbdominal">
-   </div>
-   <div class="form-group">
-      <label for="tensionArterial">Tensión arterial</label>
-      <input type="number" autocomplete="off" class="form-control" id="tensionArterial" name="tensionArterial" [(ngModel)]="usoDatosCardio.tensionArterial">
-   </div>
-
-   <div class="form-group">
-      <label for="ejercicioDiario">Actividad Física</label>
-      <p>¿Realiza al menos 30 minutos de actividad física diariamente?,  puede ser una caminata activa durante 30 minutos continuos o fraccionados en 2 momentos de 15 minutos o 3 momentos de 10 minutos. 
-
-         En este caso o si se acude a un gimnasio y se realiza entrenamiento cardiovascular y de fuerza la respuesta será sí, de lo contrario sería no. 
+         Escribir la cifra en centímetros. Nótese que es un número entero, sin decimales.
+         Ejemplos: si la cifra es  94,3 centímetros, anote 94; si la medición dio 105,8 centímetros, anote 106.
 
       </p>
-      <select class="form-control" id="ejercicioDiario" name="ejercicioDiario" [(ngModel)]="usoDatosCardio.ejercicioDiario">
-          <option value="si" selected>Si</option>
-          <option value="no" selected>No</option>
-      </select>
-   </div>
+      <br><br>
 
-   <div class="form-group">
-      <label for="consumoVerduras">¿Con qué frecuencia consume
-         verduras y frutas?</label>
-      <select class="form-control" id="consumoVerduras" name="consumoVerduras" [(ngModel)]="usoDatosCardio.consumoVerduras">
-          <option value="tdias" selected>Todos los días</option>
-          <option value="ntdias" selected>No todos los días</option>
-      </select>
-   </div>
+   </section>
 
-   <div class="form-group">
-      <label for="tieneHtensionArt">¿Tiene hipertensión arterial?</label>
-      <select class="form-control" id="tieneHtensionArt" name="tieneHtensionArt" [(ngModel)]="usoDatosCardio.tieneHtensionArt">
-          <option value="si" selected>Si</option>
-          <option value="no" selected>No</option>
-      </select>
-   </div>
+   <form>
 
-   <div class="form-group">
-      <label for="nivelAzucar">Alguna vez le han encontrado
-         niveles altos de azúcar en sangre,
-          ej. en un control médico,
-          durante una  enfermedad, o durante el embarazo)?</label>
-      <select class="form-control" id="nivelAzucar" name="nivelAzucar" [(ngModel)]="usoDatosCardio.nivelAzucar">
-          <option value="si" selected>Si</option>
-          <option value="no" selected>No</option>
-      </select>
-   </div>
+      <div class="form-group">
+            <label for="perAbdominal">Perímetro abdominal</label>
+            <input type="number" autocomplete="off" class="form-control" id="perAbdominal" name="perAbdominal"  [(ngModel)]="usoDatosCardio.perAbdominal">
+      </div>
+      <div class="form-group">
+         <label for="tensionArterial">Tensión arterial</label>
+         <input type="number" autocomplete="off" class="form-control" id="tensionArterial" name="tensionArterial" [(ngModel)]="usoDatosCardio.tensionArterial">
+      </div>
 
-   <div class="form-group">
-      <label for="familiarDiabetes">¿Alguien en su familia está diagnosticado con diabetes? </label>
-      <select class="form-control" id="familiarDiabetes" name="familiarDiabetes" [(ngModel)]="usoDatosCardio.familiarDiabetes">
-          <option value="si opcion padre" selected>Sí: padres, hermanos, hijos</option>
-          <option value="si abuelo" selected>Si: abuelos, tíos, primos</option>
-          <option value="no" selected>No</option>
-      </select>
-   </div>
+      <div class="form-group">
+         <label for="ejercicioDiario">Actividad Física</label>
+         <p>¿Realiza al menos 30 minutos de actividad física diariamente?,  puede ser una caminata activa durante 30 minutos continuos o fraccionados en 2 momentos de 15 minutos o 3 momentos de 10 minutos. 
 
-   <div class="form-group">
-      <label for="diabetico">¿Es diabético?</label>
-      <select class="form-control" id="diabetico" name="diabetico" [(ngModel)]="usoDatosCardio.diabetico">
-          <option value="si" selected>Si</option>
-          <option value="no" selected>No</option>
-      </select>
-   </div>
+            En este caso o si se acude a un gimnasio y se realiza entrenamiento cardiovascular y de fuerza la respuesta será sí, de lo contrario sería no. 
 
-   <div class="form-group">
-      <label for="fuma">¿Fuma o consume algún producto derivado del tabaco?      </label>
-      <select class="form-control" id="fuma" name="fuma" [(ngModel)]="usoDatosCardio.fuma">
-          <option value="si" selected>Si</option>
-          <option value="no" selected>No</option>
-      </select>
-   </div>
+         </p>
+         <select class="form-control" id="ejercicioDiario" name="ejercicioDiario" [(ngModel)]="usoDatosCardio.ejercicioDiario">
+            <option value="si" selected>Si</option>
+            <option value="no" selected>No</option>
+         </select>
+      </div>
 
-   <button type="submit" class="btn btn-success"   (click)="clickSiguiente()" (click)="mostrarResultadoDiabetesYCardio()">Resultado</button>
-   <button mat-flat-button class="boton-azul color-texto" (click)="clickAnterior()" >Anterior</button> <br>
+      <div class="form-group">
+         <label for="consumoVerduras">¿Con qué frecuencia consume
+            verduras y frutas?</label>
+         <select class="form-control" id="consumoVerduras" name="consumoVerduras" [(ngModel)]="usoDatosCardio.consumoVerduras">
+            <option value="tdias" selected>Todos los días</option>
+            <option value="ntdias" selected>No todos los días</option>
+         </select>
+      </div>
+
+      <div class="form-group">
+         <label for="tieneHtensionArt">¿Tiene hipertensión arterial?</label>
+         <select class="form-control" id="tieneHtensionArt" name="tieneHtensionArt" [(ngModel)]="usoDatosCardio.tieneHtensionArt">
+            <option value="si" selected>Si</option>
+            <option value="no" selected>No</option>
+         </select>
+      </div>
+
+      <div class="form-group">
+         <label for="nivelAzucar">Alguna vez le han encontrado
+            niveles altos de azúcar en sangre,
+            ej. en un control médico,
+            durante una  enfermedad, o durante el embarazo)?</label>
+         <select class="form-control" id="nivelAzucar" name="nivelAzucar" [(ngModel)]="usoDatosCardio.nivelAzucar">
+            <option value="si" selected>Si</option>
+            <option value="no" selected>No</option>
+         </select>
+      </div>
+
+      <div class="form-group">
+         <label for="familiarDiabetes">¿Alguien en su familia está diagnosticado con diabetes? </label>
+         <select class="form-control" id="familiarDiabetes" name="familiarDiabetes" [(ngModel)]="usoDatosCardio.familiarDiabetes">
+            <option value="si opcion padre" selected>Sí: padres, hermanos, hijos</option>
+            <option value="si abuelo" selected>Si: abuelos, tíos, primos</option>
+            <option value="no" selected>No</option>
+         </select>
+      </div>
+
+      <div class="form-group">
+         <label for="diabetico">¿Es diabético?</label>
+         <select class="form-control" id="diabetico" name="diabetico" [(ngModel)]="usoDatosCardio.diabetico">
+            <option value="si" selected>Si</option>
+            <option value="no" selected>No</option>
+         </select>
+      </div>
+
+      <div class="form-group">
+         <label for="fuma">¿Fuma o consume algún producto derivado del tabaco?      </label>
+         <select class="form-control" id="fuma" name="fuma" [(ngModel)]="usoDatosCardio.fuma">
+            <option value="si" selected>Si</option>
+            <option value="no" selected>No</option>
+         </select>
+      </div>
+
+      <button type="submit" class="myButtonSig"   (click)="clickSiguiente()" (click)="mostrarResultadoDiabetesYCardio()">Resultado</button><br><br>
+      <button class="myButtonBack" (click)="clickAnterior()" >Anterior</button> <br>
 
 
+   </form>
 
-
-</form>
+</div>
 
 
 

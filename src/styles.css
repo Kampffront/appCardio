@@ -3,7 +3,7 @@
 @import url(bulma/css/bulma.css);
 
 
-body { margin: 0; 
+body { 
   
     font-family: 'Titillium Web', sans-serif; }
 
@@ -121,27 +121,7 @@ h2{
 .fondo{
   background-image: url("assets/ilustraciones/trazadoMenu.svg");
   background-size:cover;
-
- 
-
-/* Para dejar la imagen de fondo centrada, vertical y
-
-horizontalmente */
-
-background-position: center ;
-
-/* Para que la imagen de fondo no se repita */
-
-background-repeat: no-repeat;
-
-/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
-
-
-
-/* Se muestra un color de fondo mientras se está cargando la imagen
-
-de fondo o si hay problemas para cargarla */
-
+  background-attachment: fixed;
 
 
 }
@@ -151,29 +131,8 @@ de fondo o si hay problemas para cargarla */
 .fondoDos{
 	background-image: url("assets/ilustraciones/trazadoMenuInferior.svg");
 	background-size:cover;
-  
-   
-  
-  /* Para dejar la imagen de fondo centrada, vertical y
-  
-  horizontalmente */
-  
-  background-position: center ;
-  
-  /* Para que la imagen de fondo no se repita */
-  
-  background-repeat: no-repeat;
-  
-  /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
-  
-  
-  
-  /* Se muestra un color de fondo mientras se está cargando la imagen
-  
-  de fondo o si hay problemas para cargarla */
-  
-  
-  
+	background-attachment: fixed;
+
   }
 
 
