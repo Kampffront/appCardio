@@ -362,7 +362,7 @@ asignarPuntajeMedicamentosHiper(puntajeMedicamentosHiper: string){
     
       }
 
-        ////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // metodos para calcular riesgoCardioVascular
 
   asignarColorArreglo(arreglo : string[]){
@@ -439,7 +439,7 @@ asignarPuntajeMedicamentosHiper(puntajeMedicamentosHiper: string){
 
     }
 
-    mostrarRiesgoCardio(colorFinal: string){/////// mostrar informacion final pendiente por modificar porcentajes para calcularlos
+    mostrarRiesgoCardioPorcentaje(colorFinal: string){/////// mostrar informacion final pendiente por modificar porcentajes para calcularlos
       let porcentaje: string="";
     
       if (colorFinal=="verde") {
@@ -462,6 +462,31 @@ asignarPuntajeMedicamentosHiper(puntajeMedicamentosHiper: string){
 
         return "falta falta"
       }
+}
+
+mostrarRiesgoCardioDescripcion(porcentajeCardio : string){/////// mostrar informacion final descripcion de riesgo cardio
+  let descripcionCardio: string="";
+
+  if (porcentajeCardio=="menor de 10%") {
+    return descripcionCardio="Riesgo Bajo";
+
+
+  } else if(porcentajeCardio=="de 10% a 20%"){
+    return descripcionCardio="Riesgo Moderado";
+
+  }else if(porcentajeCardio=="de 20% a 30%"){
+    return descripcionCardio="Riesgo Alto";
+
+  }else if(porcentajeCardio=="de 30% a 40%"){
+    return descripcionCardio="Riesgo Muy Alto";
+
+  } else if(porcentajeCardio=="mas de 40%"){
+  return descripcionCardio= "Riesgo Extremadamente Alto";
+  }
+  else{
+
+    return "falta falta"
+  }
 
 
 
