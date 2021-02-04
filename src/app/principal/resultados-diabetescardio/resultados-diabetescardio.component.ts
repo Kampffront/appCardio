@@ -42,10 +42,14 @@ export class ResultadosDiabetescardioComponent implements OnInit {
 
 
     //valores cardio para sacar resultados
+    this.descripcionNivelRiesgoCardio = this.servicio.descripcionNivelRiesgoCardio;
     this.colorFinal=this.servicio.asignarColorFinal();
     this.riesgoCardioPorcentajeMuestra = this.servicio.mostrarRiesgoCardioPorcentaje(this.colorFinal);
     this.descripcionNivelRiesgoCardio = this.servicio.mostrarRiesgoCardioDescripcion(this.riesgoCardioPorcentajeMuestra);
-
+    
+    this.servicio.resultadoNivelRiesgoCardio = this.riesgoCardioPorcentajeMuestra;
+    this.servicio.descripcionNivelRiesgoCardio = this.descripcionNivelRiesgoCardio;
+    console.log(this.servicio);
   }
 
 

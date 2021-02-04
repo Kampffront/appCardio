@@ -460,7 +460,7 @@ asignarPuntajeMedicamentosHiper(puntajeMedicamentosHiper: string){
       }
       else{
 
-        return "falta falta"
+        return "Porcentaje no valido"
       }
 }
 
@@ -485,7 +485,7 @@ mostrarRiesgoCardioDescripcion(porcentajeCardio : string){/////// mostrar inform
   }
   else{
 
-    return "falta falta"
+    return "descripcion no valida"
   }
 
 
