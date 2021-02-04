@@ -25,53 +25,33 @@ export class ResultadosDiabetescardioComponent implements OnInit {
 
 
 
-  constructor(private router : Router,
-    private puntajeDiabetesServicio : ResultadostotalService
-     ) { }
+  constructor(private router : Router,private servicio : ResultadostotalService) { 
+
+
+     }
 
   ngOnInit(): void {// se inicializan los valores con los valores del servicio
-    this.PuntajeMuestra= this.puntajeDiabetesServicio.puntajeDiabetesServicio.puntajeDiabetesTotal;
+    
+     //valores diabetes para sacar resultados
+     this.servicio.sumarPuntajesResultadoDiabetes(this.servicio.puntajeDiabetes);// se ingresa el puntaje obtenido para mostrarlo
+     this.PuntajeMuestra=this.servicio.puntajeDiabetes.puntajeDiabetesTotal;
+     this.servicio.resultadoInformacionRiesgoDiabetes(this.PuntajeMuestra);
+     this.nivelRiesgoDiabetesMuestra = this.servicio.nivelRiesgoDiabetesMuestra;
+     this.descripcionDiabetesMuestra = this.servicio.descripcionDiabetesMuestra;
 
-    this.resultadoInformacionRiesgoDiabetes(this.PuntajeMuestra);
+
+
+
 
 
     //valores cardio para sacar resultados
-    this.colorFinal=this.puntajeDiabetesServicio.asignarColorFinal();
-    this.riesgoCardioPorcentajeMuestra= this.puntajeDiabetesServicio.mostrarRiesgoCardio(this.colorFinal);
-  
-
-
+    this.colorFinal=this.servicio.asignarColorFinal();
+    this.riesgoCardioPorcentajeMuestra= this.servicio.mostrarRiesgoCardio(this.colorFinal);
 
   }
 
-  resultadoInformacionRiesgoDiabetes(puntajeDiabetes: number){
-    if (puntajeDiabetes <10) {
-      this.nivelRiesgoDiabetesMuestra="Bajo";
-      this.descripcionDiabetesMuestra="¡Felicitaciones! Usted tiene un riesgo bajo para desarrollar diabetes. Le sugerimos que controle su peso regularmente, consuma frutas y verduras diariamente y practique al menos 30 minutos de actividad física con intensidad moderada por día,  para así mantener y mejorar su salud. ";
-    } else if(puntajeDiabetes>=10 && puntajeDiabetes<=12){
-      this.nivelRiesgoDiabetesMuestra="Medio";
-      this.descripcionDiabetesMuestra="Usted tiene un riesgo moderado de tener diabetes y prediabetes. Sugerimos que considere aumentar su actividad física, mejorar sus hábitos de alimentación y prestar atención a su peso, para prevenir el desarrollo de diabetes. Los cambios  en su estilo de vida pueden prevenir completamente la diabetes  o al menos retrasar su inicio hasta edades ya muy avanzadas.";
-    }else{
-      this.nivelRiesgoDiabetesMuestra="Alto";
-      this.descripcionDiabetesMuestra="Usted tiene un riesgo alto de tener diabetes y prediabetes. Sugerimos que usted pida una cita a su EPS o su médico para  que le realice una prueba de glicemia en ayuno y reciba  consejo sobre cómo cambiar sus hábitos de vida para mejorar  su salud.";
-    }
-
-  }
-
-
-
-  
-
-
-
-
-  
-
-
-   
 
   finalEncuesta(){
-    console.log(this.puntajeDiabetesServicio);
 
   this.router.navigate(['principal']);
   }

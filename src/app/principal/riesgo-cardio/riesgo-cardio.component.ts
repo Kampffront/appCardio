@@ -36,45 +36,24 @@ export class RiesgoCardioComponent implements OnInit {
   diabetico: '',
   fuma:  '',
   }
-  
-   puntaje : PuntajeDiabetes;///se define el puntaje para usarlo en este componente;
-   
-
-
-
-
-  
 
 
   constructor(private router : Router, private datosCardioServicio:  ResultadostotalService) {
-    this.puntaje = this.datosCardioServicio.puntajeDiabetesServicio;
+  
 
   }
 
 
   ngOnInit(): void {
+     // se asigna la referencia del puntaje Diabetes
 
     this.usoDatosCardio = this.datosCardioServicio.datosCardio;
-    this.puntaje = this.datosCardioServicio.puntajeDiabetesServicio;
-
-
   }
-
-  mostrarResultadoDiabetesYCardio(){
-    this.datosCardioServicio.sumarPuntajesResultadoDiabetes(this.puntaje);// se ingresa el puntaje obtenido para mostrarlo
-
-
-
-  }
-
-
-
 
   clickSiguiente(){
-    // se ejecuta el meotdo para sumar todo lo almacenado en la encuesta de diabetes
 
     this.router.navigate(['resultadoDiabetesCardio']);
-    
+
     
   }
 
