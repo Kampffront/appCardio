@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 
 
 
+
+
 @Component({
   selector: 'app-principal-botones',
   templateUrl: './principal-botones.component.html',

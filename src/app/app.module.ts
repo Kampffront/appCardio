@@ -26,6 +26,7 @@ import { CommonModule } from '@angular/common';
 import { ResultadostotalService } from './resultadostotal.service';
 import { ResultadosDiabetescardioComponent } from './principal/resultados-diabetescardio/resultados-diabetescardio.component';
 import { ImagenImcComponent } from './principal/imagen-imc/imagen-imc.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -53,9 +54,8 @@ import { ImagenImcComponent } from './principal/imagen-imc/imagen-imc.component'
     MatButtonModule,
     MatIconModule,
     FormsModule,
-    CommonModule
-
-
+    CommonModule,
+    HttpClientModule
     
   ],
   providers: [ ResultadostotalService],
