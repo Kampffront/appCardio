@@ -27,6 +27,7 @@ import { ResultadostotalService } from './resultadostotal.service';
 import { ResultadosDiabetescardioComponent } from './principal/resultados-diabetescardio/resultados-diabetescardio.component';
 import { ImagenImcComponent } from './principal/imagen-imc/imagen-imc.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 
@@ -53,7 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     FormsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     
   ],
   providers: [ ResultadostotalService],
