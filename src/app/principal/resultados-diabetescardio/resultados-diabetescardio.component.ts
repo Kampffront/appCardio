@@ -1,3 +1,4 @@
+import { identifierModuleUrl } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ResultadostotalService } from 'src/app/resultadostotal.service';
@@ -73,14 +74,23 @@ export class ResultadosDiabetescardioComponent implements OnInit {
        nivelRiesgoDiabetesMuestra,
        descripcionDiabetesMuestra,
     }
-     
-    localStorage.setItem("resultadoTotal", JSON.stringify(resultadoTotal ));
+     if (this.servicio.identificador<40) {// guardar en el local storage
+       this.servicio.identificador=this.servicio.identificador+1;
+       let identificadorString = this.servicio.identificador
+       localStorage.setItem(""+identificadorString, JSON.stringify(resultadoTotal ));
+       
+     } else {
+       
+     }
+    
 
 
 
 
 
-  this.router.navigate(['principal']);
+
+console.log(resultadoTotal);
+ this.router.navigate(['principal']);
   }
 
   clickAnterior(){

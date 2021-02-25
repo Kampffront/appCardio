@@ -10,6 +10,9 @@ import { PuntajeDiabetes } from './models/puntajeDiabetes';
 
 export class ResultadostotalService {
 
+  identificador: number=0;
+  datosTotal={};
+
   constructor() { }
 
   //datos socio economicos , informacion agregada.
@@ -91,6 +94,13 @@ export class ResultadostotalService {
   public PuntajeMuestra : number = 0;
   public nivelRiesgoDiabetesMuestra : string ="";
   public descripcionDiabetesMuestra : string ="";
+
+  getLocalStorageInfo(llave : number){
+    let llavecadena: String = llave.toString();
+    //this.datosTotal= JSON.parse(localStorage.getItem('1');
+
+   console.log(this.datosTotal);
+  }
 
 
 
