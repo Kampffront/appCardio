@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class DatosService {
 
-  constructor(private httpclient : HttpClient) { }
+ // constructor(private httpclient : HttpClient) { }
 
-  getUsers() : Observable <any>{
-    return this.httpclient.get("https://reqres.in/api/users?page=2");
+  //getUsers() : Observable <any>{
+   // return this.httpclient.get("https://reqres.in/api/users?page=2");
 
   }
-}
+
 

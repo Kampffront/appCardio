@@ -51,6 +51,7 @@ export class RiesgoCardioComponent implements OnInit {
   }
 
   clickSiguiente(){
+    console.log(this.usoDatosCardio);
 
     this.router.navigate(['resultadoDiabetesCardio']);
 

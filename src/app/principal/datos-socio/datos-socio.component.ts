@@ -65,6 +65,7 @@ export class DatosSocioComponent implements OnInit {
     this.model1.interpretacionImc=this.datoSocio.determinarRiesgoSobrePeso(this.model1.resultadoImc);
     this.model1.descripcionImc=this.datoSocio.determinarDescripcionImc(this.model1.interpretacionImc);
     
+    
 
   }
 
@@ -77,8 +78,10 @@ export class DatosSocioComponent implements OnInit {
   }
 
   clickSiguiente(){
+    console.log(this.model1);
+    
 
-    this.router.navigate(['resultadoImc']);
+  this.router.navigate(['resultadoImc']);
   }
 
 }

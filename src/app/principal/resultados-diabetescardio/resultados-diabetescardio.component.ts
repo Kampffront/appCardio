@@ -72,11 +72,12 @@ export class ResultadosDiabetescardioComponent implements OnInit {
        descripcionNivelRiesgoCardio,
        nivelRiesgoDiabetesMuestra,
        descripcionDiabetesMuestra,
-
-
     }
-
+     
     localStorage.setItem("resultadoTotal", JSON.stringify(resultadoTotal ));
+
+
+
 
 
   this.router.navigate(['principal']);
