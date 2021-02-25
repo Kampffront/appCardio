@@ -40,6 +40,8 @@ export class ResultadosDiabetescardioComponent implements OnInit {
      this.nivelRiesgoDiabetesMuestra = this.servicio.nivelRiesgoDiabetesMuestra;
      this.descripcionDiabetesMuestra = this.servicio.descripcionDiabetesMuestra;
 
+     
+
 
     //valores cardio para sacar resultados
     this.descripcionNivelRiesgoCardio = this.servicio.descripcionNivelRiesgoCardio;
@@ -54,6 +56,28 @@ export class ResultadosDiabetescardioComponent implements OnInit {
 
 
   finalEncuesta(){
+    let datosVariables= this.servicio.model;
+    let datosCardio = this.servicio.datosCardio;
+    let puntajeDiabetes = this.servicio.puntajeDiabetes;
+    let resultadoNivelRiesgoCardio = this.servicio.resultadoNivelRiesgoCardio;
+    let descripcionNivelRiesgoCardio = this.servicio.descripcionNivelRiesgoCardio;
+    let nivelRiesgoDiabetesMuestra = this.servicio.nivelRiesgoDiabetesMuestra;
+    let descripcionDiabetesMuestra = this.servicio.descripcionDiabetesMuestra;
+    
+     const resultadoTotal ={
+       datosVariables,
+       datosCardio,
+       puntajeDiabetes,
+       resultadoNivelRiesgoCardio,
+       descripcionNivelRiesgoCardio,
+       nivelRiesgoDiabetesMuestra,
+       descripcionDiabetesMuestra,
+
+
+    }
+
+    localStorage.setItem("resultadoTotal", JSON.stringify(resultadoTotal ));
+
 
   this.router.navigate(['principal']);
   }
