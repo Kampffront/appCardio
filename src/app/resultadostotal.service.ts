@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DatosCardio } from './models/datos-cardio';
 import { Datosvariables } from './models/datosvariables';
+import { Entrevistado } from './models/entrevistado.model';
 import { PuntajeDiabetes } from './models/puntajeDiabetes';
 
 @Injectable({
@@ -10,10 +11,46 @@ import { PuntajeDiabetes } from './models/puntajeDiabetes';
 
 export class ResultadostotalService {
 
-  identificador: number=0;
-  datosTotal={};
+    arregloEntrevistados: Entrevistado[];
+    sigId: number=0;
 
-  constructor() { }
+  constructor() {
+
+//  let arregloEntrevistados= this.getDatosEntrevistado();
+  this.arregloEntrevistados= []
+    //this.sigId=0;
+   }
+
+   public agregarDatosEntrevistado(        
+    datosVariables : any,
+    datosCardio : any,
+    puntajeDiabetes :any,
+    resultadoNivelRiesgoCardio: any,
+    descripcionNivelRiesgoCardio: any,
+    nivelRiesgoDiabetesMuestra : any,
+    descripcionDiabetesMuestra : any,
+) : void{
+     let arregloEntrevistado = new Entrevistado(datosVariables ,
+      datosCardio ,
+      puntajeDiabetes,
+      resultadoNivelRiesgoCardio,
+      descripcionNivelRiesgoCardio,
+      nivelRiesgoDiabetesMuestra ,
+      descripcionDiabetesMuestra );
+
+     this.arregloEntrevistados.push(arregloEntrevistado);
+     this.sigId++;
+   }
+
+   //public getDatosEntrevistado() : Entrevistado[]{
+  //   let localStorageItem = JSON.parse(localStorage.getItem('arregloEntrevistados'));
+   //  return localStorageItem == null ? [] : localStorageItem.arregloEntrevistados;
+  // }
+
+   private setLocalStorageArreglo (arregloEntrevistados: Entrevistado[]): void {
+     localStorage.setItem('arregloEntrevistados', JSON.stringify({arregloEntrevistados: arregloEntrevistados}));
+   }
+
 
   //datos socio economicos , informacion agregada.
   model: Datosvariables = {
@@ -99,7 +136,7 @@ export class ResultadostotalService {
     let llavecadena: String = llave.toString();
     //this.datosTotal= JSON.parse(localStorage.getItem('1');
 
-   console.log(this.datosTotal);
+
   }
 
 

@@ -74,14 +74,14 @@ export class ResultadosDiabetescardioComponent implements OnInit {
        nivelRiesgoDiabetesMuestra,
        descripcionDiabetesMuestra,
     }
-     if (this.servicio.identificador<40) {// guardar en el local storage
-       this.servicio.identificador=this.servicio.identificador+1;
-       let identificadorString = this.servicio.identificador
-       localStorage.setItem(""+identificadorString, JSON.stringify(resultadoTotal ));
+  //   if (this.servicio.sigId<40) {// guardar en el local storage
+     //  this.servicio.sigId=this.servicio.identificador+1;
+       //let identificadorString = this.servicio.identificador
+    //   localStorage.setItem(""+identificadorString, JSON.stringify(resultadoTotal ));
        
-     } else {
+  //   } else {
        
-     }
+    // }
     
 
 
@@ -89,7 +89,7 @@ export class ResultadosDiabetescardioComponent implements OnInit {
 
 
 
-console.log(resultadoTotal);
+//console.log(resultadoTotal);
  this.router.navigate(['principal']);
   }
 
