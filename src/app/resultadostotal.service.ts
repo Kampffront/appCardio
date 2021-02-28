@@ -20,6 +20,7 @@ export class ResultadostotalService {
 //  let arregloEntrevistados= this.getDatosEntrevistado();
   this.arregloEntrevistados= []
     //this.sigId=0;
+
    }
 
    public agregarDatosEntrevistado(        
@@ -44,15 +45,16 @@ export class ResultadostotalService {
    }
 
    getArreglo(){
-     return this.arregloEntrevistados
+     return this.arregloEntrevistados;
    }
 
-   //public getDatosEntrevistado() : Entrevistado[]{
-  //   let localStorageItem = JSON.parse(localStorage.getItem('arregloEntrevistados'));
-   //  return localStorageItem == null ? [] : localStorageItem.arregloEntrevistados;
-  // }
+  // public getDatosEntrevistado() : Entrevistado[]{
+ // let localstorageitem = JSON.parse(localStorage.getItem("arregloEntrevistados");
+  // return localstorageitem == null ? [] : localstorageitem.arregloEntrevistados;
+  //}
 
    public setLocalStorageArreglo (arregloEntrevistados: Entrevistado[]): void {
+     
      localStorage.setItem('arregloEntrevistados', JSON.stringify({arregloEntrevistados: arregloEntrevistados}));
    }
 

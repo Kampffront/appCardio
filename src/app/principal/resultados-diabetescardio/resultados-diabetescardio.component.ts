@@ -95,14 +95,15 @@ export class ResultadosDiabetescardioComponent implements OnInit {
      console.log(this.servicio.arregloEntrevistados[this.servicio.sigId]=resultadostotales);
      this.servicio.setLocalStorageArreglo(this.servicio.arregloEntrevistados);
 
-     console.log(this.servicio.arregloEntrevistados[this.servicio.sigId]=resultadostotales);
+
      console.log(resultadostotales);
 
 
 
     
   if (this.servicio.identificador<1000) {// guardar en el local storage
-     this.servicio.identificador=this.servicio.identificador+1;
+      let incremento=localStorage.length;// aumenta el key del localstorage
+     this.servicio.identificador=incremento;
        let identificadorString = this.servicio.identificador
       localStorage.setItem(""+identificadorString, JSON.stringify(resultadostotales));
        
