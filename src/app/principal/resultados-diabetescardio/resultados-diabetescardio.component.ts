@@ -118,7 +118,7 @@ export class ResultadosDiabetescardioComponent implements OnInit {
 
 
 //console.log(resultadoTotal);
- //this.router.navigate(['principal']);
+ this.router.navigate(['principal']);
   }
 
   clickAnterior(){
