@@ -17,7 +17,7 @@ export class ResultadostotalService {
 
   constructor() {
 
-//  let arregloEntrevistados= this.getDatosEntrevistado();
+  //let arregloEntrevistados= this.getDatosEntrevistado();
   this.arregloEntrevistados= []
     //this.sigId=0;
 
@@ -32,7 +32,7 @@ export class ResultadostotalService {
     nivelRiesgoDiabetesMuestra : any,
     descripcionDiabetesMuestra : any,
 ) : void{
-     var arregloEntrevistado = new Entrevistado(datosVariables ,
+     let arregloEntrevistado = new Entrevistado(datosVariables ,
       datosCardio ,
       puntajeDiabetes,
       resultadoNivelRiesgoCardio,
@@ -44,14 +44,15 @@ export class ResultadostotalService {
      this.sigId++;
    }
 
-   getArreglo(){
-     return this.arregloEntrevistados;
+   getDatosTotales(key : number){
+     let localItem = JSON.parse(localStorage.getItem(""+key)!);
+     return localItem;
    }
 
-  // public getDatosEntrevistado() : Entrevistado[]{
- // let localstorageitem = JSON.parse(localStorage.getItem("arregloEntrevistados");
-  // return localstorageitem == null ? [] : localstorageitem.arregloEntrevistados;
-  //}
+  public getDatosEntrevistado() : Entrevistado[]{
+  let localstorageitem = JSON.parse(localStorage.getItem("arregloEntrevistados")!);
+  return localstorageitem == null ? [] : localstorageitem.arregloEntrevistados;
+  }
 
    public setLocalStorageArreglo (arregloEntrevistados: Entrevistado[]): void {
      
