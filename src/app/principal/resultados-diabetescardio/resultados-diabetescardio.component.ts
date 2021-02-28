@@ -43,6 +43,8 @@ export class ResultadosDiabetescardioComponent implements OnInit {
 
      
 
+     
+
 
     //valores cardio para sacar resultados
     this.descripcionNivelRiesgoCardio = this.servicio.descripcionNivelRiesgoCardio;
@@ -64,8 +66,22 @@ export class ResultadosDiabetescardioComponent implements OnInit {
     let descripcionNivelRiesgoCardio = this.servicio.descripcionNivelRiesgoCardio;
     let nivelRiesgoDiabetesMuestra = this.servicio.nivelRiesgoDiabetesMuestra;
     let descripcionDiabetesMuestra = this.servicio.descripcionDiabetesMuestra;
+
+    const resultadostotales= {
+      datosVariables,
+      datosCardio,
+      puntajeDiabetes,
+      resultadoNivelRiesgoCardio,
+      descripcionNivelRiesgoCardio,
+      nivelRiesgoDiabetesMuestra,
+      descripcionDiabetesMuestra,
+
+   }
+
+
     
-     const resultadoTotal ={
+    //llamando al metodo del servicio para agregar los datos al arreglo.
+     this.servicio.agregarDatosEntrevistado(
        datosVariables,
        datosCardio,
        puntajeDiabetes,
@@ -73,15 +89,26 @@ export class ResultadosDiabetescardioComponent implements OnInit {
        descripcionNivelRiesgoCardio,
        nivelRiesgoDiabetesMuestra,
        descripcionDiabetesMuestra,
+     );
+
+     // llamando al metodo para agregar una nueva instancia del arreglo al local storage
+     console.log(this.servicio.arregloEntrevistados[this.servicio.sigId]=resultadostotales);
+     this.servicio.setLocalStorageArreglo(this.servicio.arregloEntrevistados);
+
+     console.log(this.servicio.arregloEntrevistados[this.servicio.sigId]=resultadostotales);
+     console.log(resultadostotales);
+
+
+
+    
+  if (this.servicio.identificador<1000) {// guardar en el local storage
+     this.servicio.identificador=this.servicio.identificador+1;
+       let identificadorString = this.servicio.identificador
+      localStorage.setItem(""+identificadorString, JSON.stringify(resultadostotales));
+       
+    } else {
+       
     }
-  //   if (this.servicio.sigId<40) {// guardar en el local storage
-     //  this.servicio.sigId=this.servicio.identificador+1;
-       //let identificadorString = this.servicio.identificador
-    //   localStorage.setItem(""+identificadorString, JSON.stringify(resultadoTotal ));
-       
-  //   } else {
-       
-    // }
     
 
 
@@ -90,7 +117,7 @@ export class ResultadosDiabetescardioComponent implements OnInit {
 
 
 //console.log(resultadoTotal);
- this.router.navigate(['principal']);
+ //this.router.navigate(['principal']);
   }
 
   clickAnterior(){
