@@ -66,10 +66,18 @@
       </div>
 
       <div class="form-group">
+         <label for="tomaMedicamentos">¿Toma Medicamentos?</label>
+         <select class="form-control" id="tomaMedicamentos" name="tomaMedicamentos" [(ngModel)]="usoDatosCardio.tomaMedicamentos">
+            <option value="si" selected>Si</option>
+            <option value="no" selected>No</option>
+         </select>
+      </div>
+
+      <div class="form-group">
          <label for="nivelAzucar">Alguna vez le han encontrado
             niveles altos de azúcar en sangre,
             ej. en un control médico,
-            durante una  enfermedad, o durante el embarazo)?</label>
+            durante una  enfermedad, o durante el embarazo?</label>
          <select class="form-control" id="nivelAzucar" name="nivelAzucar" [(ngModel)]="usoDatosCardio.nivelAzucar">
             <option value="si" selected>Si</option>
             <option value="no" selected>No</option>
