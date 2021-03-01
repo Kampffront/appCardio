@@ -68,6 +68,14 @@
 
 
       <div class="form-group">
+         <label for="tomaMedicamentos">¿Toma medicamentos?</label>
+         <select class="form-control" id="tieneHtensionArt" name="tieneHtensionArt" [(ngModel)]="usoDatosCardio.tomaMedicamentos">
+            <option value="si" selected>Si</option>
+            <option value="no" selected>No</option>
+         </select>
+      </div>
+
+      <div class="form-group">
          <label for="nivelAzucar">Alguna vez le han encontrado
             niveles altos de azúcar en sangre,
             ej. en un control médico,
