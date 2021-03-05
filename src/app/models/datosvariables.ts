@@ -21,7 +21,7 @@ export interface Datosvariables {
         cantidadHijos: number;
         dependenciaPadres:  string;
       
-      //segunda parte tamizaje
+      //segunda parte; tamizaje
       
         peso: number;
         altura: number;

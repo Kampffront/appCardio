@@ -1,5 +1,6 @@
 export interface PuntajeDiabetes {
 
+    //Puntajes obtenidos
     puntajeEdad : number;
     puntajeImc : number;
     puntajePerAbdominal : number;

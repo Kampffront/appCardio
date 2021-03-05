@@ -16,9 +16,8 @@ export class DatosSocioComponent implements OnInit {
 
   tieneHijos= false;
 
-
   model1 : Datosvariables = { 
-
+  
   edad: 0,
   nombre:'',
   tipoDoc:'',
@@ -38,7 +37,7 @@ export class DatosSocioComponent implements OnInit {
   cantidadHijos: 0,
   dependenciaPadres: '',
 
-//segunda parte tamizaje
+//segunda parte; tamizaje
 
   peso: 0,
   altura: 0,
