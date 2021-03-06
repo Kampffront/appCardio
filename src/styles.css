@@ -26,11 +26,11 @@ h2{
 
 
 .colorTitulos{
-	color: #F8A851;
+	color: white;
 }
 
 .colorTituloPrincipal{
-	color: #e9dceb;
+	color: white;
 
 }
 
@@ -116,7 +116,7 @@ h2{
 
 /* fondo uno color superior /////////////////////////////////////// /////////////////////////////////////////*/
 .fondo{
-  background-image: url("assets/ilustraciones/trazadoMenu.svg");
+  background-image: url("assets/ilustraciones/trazadoCero.svg");
   background-size:cover;
   background-attachment: fixed;
 
@@ -126,7 +126,7 @@ h2{
 
 /* fondo dos color inferior /////////////////////////////////////// /////////////////////////////////////////*/
 .fondoDos{
-	background-image: url("assets/ilustraciones/trazadoMenuInferior.svg");
+	background-image: url("assets/ilustraciones/trazadoCero.svg");
 	background-size:cover;
 	background-attachment: fixed;
 
