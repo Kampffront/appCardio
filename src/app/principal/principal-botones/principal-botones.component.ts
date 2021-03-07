@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 
-
-
-
 @Component({
   selector: 'app-principal-botones',
   templateUrl: './principal-botones.component.html',
@@ -12,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PrincipalBotonesComponent implements OnInit {
 
-  public title : String ="INSTRUMENTO PARA DETERMINAR EL RIESGO CARDIOVASCULAR Y METABÓLICO EN JÓVENES ENTRE 18 A 28 AÑOS";
+  public titulo : String ="INSTRUMENTO PARA DETERMINAR EL RIESGO CARDIOVASCULAR Y METABÓLICO EN JÓVENES ENTRE 18 A 28 AÑOS";
   
 
   constructor(private router : Router) { }

@@ -8,30 +8,26 @@ body {
     font-family: 'Titillium Web', sans-serif; }
 
 
-
-
+/* Selector*/
 h1{
-font-family: Titillium, 'Titillium Web', sans-serif  ;
-font-weight: 700;
-font-size: 2rem;
+	font-family: Titillium, 'Titillium Web', sans-serif  ;
+	font-weight: 700;
+	font-size: 2rem;
+};
 
-}
-
+/* Selector*/
 h2{
 	font-family: Titillium, 'Titillium Web', sans-serif  ;
 	font-weight: 700;
 	font-size: 2rem;
   }
 
-
-
-.colorTitulos{
-	color: white;
-}
-
 .colorTituloPrincipal{
-	color: white;
+	color: rgb(255, 255, 255);
 
+}
+.colorTitulos{
+	color: rgb(255, 255, 255);
 }
 
 .colorParrafos{
